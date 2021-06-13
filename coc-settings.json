@@ -39,7 +39,6 @@
   "snippets.snipmate.author": "Eliaz Bobadilla",
 
   //------------------ Git -----------------------//
-  "git.addGBlameToVirtualText": true,
   "git.semanticCommit.scope": false,
 
   //------------------ List -----------------------//
@@ -70,11 +69,11 @@
   "diagnostic.showUnused": false,
   "diagnostic.enable": true,
   "suggest.defaultSortMethod": "none",
-  "codeLens.enable": true,
+  "codeLens.enable": false,
   "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
   "diagnostic.format": "%message [%source]",
-  "diagnostic.virtualText": true,
+//  "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
   "coc.preferences.willSaveHandlerTimeout": 750,
