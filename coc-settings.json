@@ -1,0 +1,123 @@
+{
+  // ESLINT //
+  "eslint.packageManager": "npm",
+  "eslint.nodePath": "/usr/bin/node",
+  "eslint.trace.server": "off",
+  "eslint.run": "onType",
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": false,
+
+  //-------------- HTML and Friends ----------------------//
+  "prettier.formatterPriority": 1,
+  "prettier.eslintIntegration": true,
+  "prettier.requireConfig": false,
+  "prettier.ignorePath": ".prettierignore",
+  "prettier.statusItemText": "Prettier",
+  "prettier.onlyUseLocalVersion": false,
+  "prettier.disableSuccessMessage": false,
+
+  //-------------- Snippets Stuff ----------------------//
+  "snippets.priority": 1,
+  "snippets.trace": "verbose",
+  "snippets.enableStatusItem": false,
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnippets",
+  "snippets.shortcut": "S",
+  "snippets.autoTrigger": true,
+  "snippets.triggerCharacters": [],
+  "snippets.loadFromExtensions": true,
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/textmate"],
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.usePythonx": true,
+  "snippets.ultisnips.directories": [],
+  "snippets.snipmate.enable": true,
+  "snippets.snipmate.author": "Eliaz Bobadilla",
+
+  //------------------ Git -----------------------//
+  "git.addGBlameToVirtualText": true,
+  "git.semanticCommit.scope": false,
+
+  //------------------ List -----------------------//
+  "list.source.mru.maxLength": 50,
+  "list.source.mru.ignoreGitIgnore": true,
+  "list.source.mru.excludePatterns": ["**/.git/*", "/tmp/*"],
+  "list.source.grep.useLiteral": true,
+  "list.source.grep.command": "rg",
+  "list.source.grep.maxColumns": 300,
+
+  //------------------ Integrated Terminal ---------------//
+  "terminal.shellPath": "/usr/bin/zsh",
+
+  //------------------ Auto Pairs -----------------------//
+  "pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
+  "pairs.enableBackspace": true,
+
+  //------------------ Json ----------------------------//
+  "json.trace.server": "off",
+  "json.format.enable": false,
+  "json.maxItemsComputed": 2500,
+  "json.schemaDownload.enable": true,
+
+  //------------------- CoC Prefreneces -----------------//
+  "diagnostic.level": "hint",
+  "signature.target": "echo",
+  "suggest.timeout": 5000,
+  "diagnostic.showUnused": false,
+  "diagnostic.enable": true,
+  "suggest.defaultSortMethod": "none",
+  "codeLens.enable": true,
+  "coc.source.around.firstMatch": false,
+  "coc.source.file.ignoreHidden": false,
+  "diagnostic.format": "%message [%source]",
+  "diagnostic.virtualText": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "coc.preferences.willSaveHandlerTimeout": 750,
+  "coc.preferences.enableMarkdown": true,
+
+  // Completion Icons
+  "suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": "  ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": " ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  ",
+    "default": "  "
+  },
+
+  "coc.preferences.colorSupport": true,
+
+  // Diagnostic Symbols
+  "diagnostic.errorSign": " ❌",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+
+  // Format
+  "coc.preferences.formatOnType": true
+}
