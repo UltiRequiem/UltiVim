@@ -2,6 +2,8 @@
 require("plugins.packer")
 -- Nice Menu
 require("plugins.dashboard")
+-- Intellisense and Autocompletion
+require("plugins.coc")
 -- Status Line
 require("plugins.lualine")
 -- Easy Motion

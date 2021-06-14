@@ -3,8 +3,16 @@ local mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 
+local expressive_mapper = function(mode, key, result)
+    vim.api.nvim_set_keymap(mode, key, result, {silent =  true, expr = true})
+end
+
+
 -- Define Mapleader
 vim.g.mapleader = " "
+
+-- Escape from insert mode
+mapper("i","<C-c>","<Esc>")
 
 -- Nice
 mapper("n", "<Leader>w", ":w<CR>")
@@ -56,3 +64,7 @@ mapper("n", "<Leader>o", ":HopPattern<CR>")
 
 -- File Tree Explorer
 mapper("n", "<C-n>", ":NvimTreeToggle<CR>")
+
+-- Coc.nvim
+expressive_mapper("i","<C-space>","coc#refresh()")
+mapper("n","<F3>",":Format<CR>")
