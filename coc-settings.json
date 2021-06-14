@@ -1,4 +1,8 @@
 {
+  // Python
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
+
   // ESLINT //
   "eslint.packageManager": "npm",
   "eslint.nodePath": "/usr/bin/node",
@@ -73,7 +77,7 @@
   "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
   "diagnostic.format": "%message [%source]",
-//  "diagnostic.virtualText": true,
+  //  "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
   "coc.preferences.willSaveHandlerTimeout": 750,

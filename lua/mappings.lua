@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 -- Nice
 mapper("n", "<Leader>w", ":w<CR>")
 mapper("n", "<Leader>q", ":q<CR>")
-mapper("n", "<Leader>d", ":qa!<CR>")
+mapper("n", "<Leader>e", ":qa!<CR>")
 
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
@@ -17,8 +17,6 @@ mapper("n", "tt", ":t.<CR>")
 -- Change Buffer
 mapper("n","<C-m>",":bnext<CR>")
 mapper("n","<C-n>",":bprev<CR>")
-
-mapper("n","<Leader>b",":ls<CR>:b<Space>")
 
 -- Resize with arrows
 mapper("n", "<C-Up>", ":resize -2<CR>")
@@ -57,4 +55,4 @@ mapper("n", "<Leader>l", ":HopLine<CR>")
 mapper("n", "<Leader>o", ":HopPattern<CR>")
 
 -- File Tree Explorer
-mapper("n", "<Leader>e", ":NvimTreeToggle<CR>")
+mapper("n", "<C-n>", ":NvimTreeToggle<CR>")

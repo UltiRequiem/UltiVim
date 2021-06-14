@@ -1,1 +1,1 @@
-require'lualine'.setup {options = {theme = 'oceanicnext'}}
+require "lualine".setup {options = {theme = "oceanicnext"}}

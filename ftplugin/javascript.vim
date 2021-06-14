@@ -1,2 +1,1 @@
-nnoremap <Leader>rp :w !node %<CR>
-setl ts=2 sw=2 isk+=$ sua+=.js
+setl sw=2 sts=2 ts=2

@@ -1,7 +1,10 @@
+-- Grep
 vim.g.dashboard_default_executive = 'telescope'
 
-vim.g.dashboard_custom_footer = {'Zero Requiem'}
+-- Custo Footer
+vim.g.dashboard_custom_footer = {'Gureto desu yo, koitsu wa.'}
 
+-- Custom Header
 vim.g.dashboard_custom_header = {
   '██╗░░░██╗██╗░░░░░████████╗██╗██╗░░░██╗██╗███╗░░░███╗',
   '██║░░░██║██║░░░░░╚══██╔══╝██║██║░░░██║██║████╗░████║',
@@ -11,6 +14,7 @@ vim.g.dashboard_custom_header = {
   '░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝'
 }
 
+-- Dashboard Sections
 vim.g.dashboard_custom_section = {
   a = {
     description = {'  Find File          '},

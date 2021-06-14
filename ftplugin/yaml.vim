@@ -1,1 +1,1 @@
-setl ai et indk-=<:> isk+=-,$,# sw=2 sts=2 ts=2
+setl fdm=indent sts=2 ts=2
