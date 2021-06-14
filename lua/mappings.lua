@@ -3,6 +3,7 @@ local mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 
+-- Expressive Mapping helper
 local expressive_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {silent =  true, expr = true})
 end
@@ -23,8 +24,8 @@ mapper("n", "<Leader>e", ":qa!<CR>")
 mapper("n", "tt", ":t.<CR>")
 
 -- Change Buffer
-mapper("n","<C-m>",":bnext<CR>")
-mapper("n","<C-n>",":bprev<CR>")
+mapper("n","<C-q>",":bnext<CR>")
+mapper("n","<C-a>",":bprev<CR>")
 
 -- Resize with arrows
 mapper("n", "<C-Up>", ":resize -2<CR>")

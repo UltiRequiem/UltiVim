@@ -1,0 +1,1 @@
+setl isk+=" noet
