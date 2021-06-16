@@ -3,7 +3,7 @@ vim.g.syntax_on = true
 vim.o.synmaxcol = 1500
 
 -- Fold Stuff
-vim.wo.foldenable = true
+vim.wo.foldenable = false
 vim.wo.foldnestmax = 10
 vim.wo.foldmethod = "syntax"
 

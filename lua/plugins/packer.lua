@@ -39,5 +39,11 @@ return require("packer").startup(
 
         -- JavaScript
         use {"pangloss/vim-javascript", ft = {"javascript"}} -- Better Syntax and Identation
+
+        -- HTML
+        use {"othree/html5.vim", ft = {"html"}}
+
+        -- Python
+        -- I have to search something like pangloss/vim-javascript for Python
     end
 )
