@@ -38,7 +38,11 @@ return require("packer").startup(
         use {"nvim-lua/popup.nvim"}
 
         -- JavaScript
-        use {"pangloss/vim-javascript", ft = {"javascript"}} -- Better Syntax and Identation
+        use {"othree/yajs.vim", ft = {"javascript"}}
+        use {"othree/es.next.syntax.vim", ft = {"javascript"}}
+
+        -- TypeScript
+        use {"HerringtonDarkholme/yats.vim", ft = {"typeScript"}}
 
         -- HTML
         use {"othree/html5.vim", ft = {"html"}}
