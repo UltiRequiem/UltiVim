@@ -1,5 +1,5 @@
 {
-"console.log": {
+  "console.log": {
     "prefix": "cl",
     "body": ["console.log($1)"],
     "description": "Code snippet for \"console.log\""
