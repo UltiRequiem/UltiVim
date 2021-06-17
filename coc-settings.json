@@ -268,16 +268,6 @@
   "prettier.disableLanguages": [],
   "prettier.disableSuccessMessage": false,
 
-  //--------------Language Server -----------------------//
-
-  "languageserver": {
-    "efm": {
-      "command": "efm-langserver",
-      "args": ["-c", "/path/to/your/config.yaml"],
-      "filetypes": ["vim", "lua"]
-    }
-  },
-
   //-------------- Snippets Stuff ----------------------//
   "snippets.priority": 1,
   "snippets.trace": "verbose",
