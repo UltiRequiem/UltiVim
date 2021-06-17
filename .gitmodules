@@ -1,0 +1,48 @@
+[submodule "pack/plugins/opt/pangloss"]
+	path = pack/plugins/opt/pangloss
+	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/plugins/start/coc.nvim"]
+	path = pack/plugins/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim/
+[submodule "pack/plugins/start/dashboard-nvim"]
+	path = pack/plugins/start/dashboard-nvim
+	url = https://github.com/glepnir/dashboard-nvim
+[submodule "pack/plugins/start/hop.nvim"]
+	path = pack/plugins/start/hop.nvim
+	url = https://github.com/phaazon/hop.nvim
+[submodule "pack/plugins/start/gitsigns.nvim"]
+	path = pack/plugins/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "pack/plugins/start/lualine.nvim"]
+	path = pack/plugins/start/lualine.nvim
+	url = https://github.com/hoob3rt/lualine.nvim
+[submodule "pack/plugins/start/nvim-tree.lua"]
+	path = pack/plugins/start/nvim-tree.lua
+	url = https://github.com/kyazdani42/nvim-tree.lua
+[submodule "pack/plugins/start/nvim-web-devicons"]
+	path = pack/plugins/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-tree.lua
+[submodule "pack/plugins/start/oceanic-next"]
+	path = pack/plugins/start/oceanic-next
+	url = https://github.com/mhartington/oceanic-next
+[submodule "pack/plugins/start/plenary.nvim"]
+	path = pack/plugins/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "pack/plugins/start/popup.nvim"]
+	path = pack/plugins/start/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim
+[submodule "pack/plugins/start/telescope-fzy-native.nvim"]
+	path = pack/plugins/start/telescope-fzy-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzy-native.nvim
+[submodule "pack/plugins/start/telescope-media-files.nvim"]
+	path = pack/plugins/start/telescope-media-files.nvim
+	url = https://github.com/nvim-telescope/telescope-media-files.nvim
+[submodule "pack/plugins/start/telescope.nvim"]
+	path = pack/plugins/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "pack/plugins/start/telescope-z.nvim"]
+	path = pack/plugins/start/telescope-z.nvim
+	url = https://github.com/nvim-telescope/telescope-z.nvim
+[submodule "pack/plugins/start/telescope-node-modules"]
+	path = pack/plugins/start/telescope-node-modules
+	url = https://github.com/nvim-telescope/telescope-node-modules.nvim

@@ -1,5 +1,3 @@
--- Manage Plugins
-require("plugins.packer")
 -- Nice Menu
 require("plugins.dashboard")
 -- Intellisense and Autocompletion
