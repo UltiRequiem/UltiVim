@@ -10,5 +10,3 @@ require("plugins.hop")
 require("plugins.telescope")
 -- Graphic File Tree View
 require("plugins.nvim-tree")
--- Git Integration
-require("plugins.gitsigns")
