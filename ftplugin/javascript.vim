@@ -1,3 +1,3 @@
-nnoremap <Leader>rp :!node %<CR>
-setl sw=2 sts=2 ts=2
+command! -buffer -bar NodeRun :w !node %
+nnoremap <Leader>rp :NodeRun<CR>
 packadd pangloss
