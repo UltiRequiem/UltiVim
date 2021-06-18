@@ -46,3 +46,9 @@
 [submodule "pack/plugins/start/telescope-node-modules"]
 	path = pack/plugins/start/telescope-node-modules
 	url = https://github.com/nvim-telescope/telescope-node-modules.nvim
+[submodule "pack/plugins/opt/rails"]
+	path = pack/plugins/opt/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "pack/plugins/opt/ruby"]
+	path = pack/plugins/opt/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
