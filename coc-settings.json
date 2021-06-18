@@ -161,6 +161,9 @@
   "pairs.enableBackspace": true,
   "pairs.alwaysPairCharacters": [],
 
+  // Ruby
+  "solargraph.useBundler": true,
+
   //------------------ Json ----------------------------//
   "json.enable": true,
   "json.trace.server": "off",

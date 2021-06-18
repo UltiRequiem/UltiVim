@@ -52,3 +52,9 @@
 [submodule "pack/plugins/opt/ruby"]
 	path = pack/plugins/opt/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "pack/plugins/start/commentary"]
+	path = pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/plugins/start/endwise"]
+	path = pack/plugins/start/endwise
+	url = https://github.com/tpope/vim-endwise
