@@ -58,3 +58,6 @@
 [submodule "pack/plugins/start/endwise"]
 	path = pack/plugins/start/endwise
 	url = https://github.com/tpope/vim-endwise
+[submodule "pack/plugins/start/kommentary"]
+	path = pack/plugins/start/kommentary
+	url = https://github.com/b3nj5m1n/kommentary.git
