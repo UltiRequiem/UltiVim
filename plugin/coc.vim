@@ -1,6 +1,8 @@
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+nnoremap <silent> K :call <SID>show_documentation()<Enter>
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -8,19 +10,6 @@ inoremap <silent><expr> <TAB>
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-
-nmap <leader>rn <Plug>(coc-rename)
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-
-nnoremap <silent> K :call <SID>show_documentation()<Enter>
-
-nmap <leader>ca  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-imap <C-l> <Plug>(coc-snippets-expand)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 function! s:check_back_space() abort
   let col = col('.') - 1

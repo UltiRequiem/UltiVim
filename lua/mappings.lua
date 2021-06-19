@@ -8,6 +8,11 @@ local expressive_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {silent =  true, expr = true})
 end
 
+-- Expressive Mapping helper
+local plug_mapper = function(mode, key, result)
+    vim.api.nvim_set_keymap(mode, key, result, {})
+end
+
 
 -- Define Mapleader
 vim.g.mapleader = " "
@@ -67,5 +72,12 @@ mapper("n", "<Leader>o", ":HopPattern<CR>")
 mapper("n", "<C-n>", ":NvimTreeToggle<CR>")
 
 -- Coc.nvim
+plug_mapper("n", "<leader>rn","<Plug>(coc-rename)")
+plug_mapper("i", "<C-l>","<Plug>(coc-snippets-expand)")
 expressive_mapper("i","<C-space>","coc#refresh()")
 mapper("n","<F3>",":Format<CR>")
+plug_mapper("n","gd","<Plug>(coc-definition)")
+plug_mapper("n","gr","<Plug>(coc-references)")
+plug_mapper("n","<leader>ca","<Plug>(coc-codeaction)")
+plug_mapper("n","<leader>kf","<Plug>(coc-fix-current)")
+plug_mapper("i","<C-l>","<Plug>(coc-snippets-expand-jump)")
