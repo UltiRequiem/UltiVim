@@ -162,7 +162,7 @@
   "pairs.alwaysPairCharacters": [],
 
   // Ruby
-  "solargraph.useBundler": true,
+  "solargraph.diagnostics": true,
 
   //------------------ Json ----------------------------//
   "json.enable": true,
