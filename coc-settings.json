@@ -26,9 +26,6 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pylintPath": "/usr/bin/pylint",
 
-  //----------------------------------------------------//
-
-  //-------------- JavaScript and Friends --------------//
   "javascript.showUnused": true,
   "javascript.updateImportsOnFileMove.enable": true,
   "javascript.implementationsCodeLens.enable": true,
@@ -49,13 +46,11 @@
   "javascript.autoClosingTags": true,
   "javascript.format.semicolons": "insert",
 
-  // DocThis
   "docthis.returnsTag": true,
   "docthis.includeTypes": true,
   "docthis.includeMemberOfOnClassMembers": true,
   "docthis.includeMemberOfOnInterfaceMembers": true,
 
-  // TSSERVER //
   "tsserver.enable": true,
   "tsserver.locale": null,
   "tsserver.typingsCacheLocation": "",
@@ -94,11 +89,6 @@
   "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
   "typescript.workspaceSymbols.scope": "currentProject",
 
-  // ESLINT //
-
-  //----------------------------------------------------//
-
-  //-------------- HTML and Friends ----------------------//
   "prettier.formatterPriority": 1,
   "prettier.eslintIntegration": true,
   "prettier.requireConfig": false,
@@ -108,7 +98,6 @@
   "prettier.disableLanguages": [],
   "prettier.disableSuccessMessage": false,
 
-  //-------------- Snippets Stuff ----------------------//
   "snippets.priority": 1,
   "snippets.trace": "verbose",
   "snippets.enableStatusItem": false,
@@ -129,10 +118,8 @@
   "snippets.snipmate.enable": true,
   "snippets.snipmate.author": "Eliaz Bobadilla",
 
-  //------------------ Git -----------------------//
   "git.semanticCommit.scope": false,
 
-  //------------------ List -----------------------//
   "lists.disabledLists": [],
   "list.source.files.command": "",
   "list.source.files.args": [],
@@ -144,7 +131,6 @@
   "list.source.grep.command": "rg",
   "list.source.grep.maxColumns": 300,
 
-  //------------------ Integrated Terminal ---------------//
   "terminal.REPLMappings": {
     "c": "cling",
     "cpp": "cling",
@@ -155,16 +141,13 @@
   "terminal.shellPath": "/usr/bin/zsh",
   "terminal.shellArgs": [],
 
-  //------------------ Auto Pairs -----------------------//
   "pairs.disableLanguages": [],
   "pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
   "pairs.enableBackspace": true,
   "pairs.alwaysPairCharacters": [],
 
-  // Ruby
   "solargraph.diagnostics": true,
 
-  //------------------ Json ----------------------------//
   "json.enable": true,
   "json.trace.server": "off",
   "json.execArgv": [],
@@ -173,7 +156,6 @@
   "json.schemaDownload.enable": true,
   "json.schemas": [],
 
-  //------------------- CoC Prefreneces -----------------//
   "coc.preferences.extensionUpdateCheck": "weekly",
   "diagnostic.level": "hint",
   "signature.target": "echo",
@@ -191,7 +173,6 @@
   "coc.preferences.willSaveHandlerTimeout": 750,
   "coc.preferences.enableMarkdown": true,
 
-  // Completion Icons
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
@@ -223,13 +204,11 @@
 
   "coc.preferences.colorSupport": true,
 
-  // Diagnostic Symbols
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
 
-  // Format
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["json", "html", "markdown"]
 }

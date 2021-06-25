@@ -61,3 +61,9 @@
 [submodule "pack/plugins/start/kommentary"]
 	path = pack/plugins/start/kommentary
 	url = https://github.com/b3nj5m1n/kommentary.git
+[submodule "pack/plugins/start/fugitive"]
+	path = pack/plugins/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/tpope/start/surround"]
+	path = vim/pack/tpope/start/surround
+	url = https://github.com/tpope/vim-surround
