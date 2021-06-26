@@ -67,3 +67,6 @@
 [submodule "vim/pack/tpope/start/surround"]
 	path = vim/pack/tpope/start/surround
 	url = https://github.com/tpope/vim-surround
+[submodule "pack/plugins/start/indent"]
+	path = pack/plugins/start/indent
+	url = https://github.com/Yggdroot/indentLine.git
