@@ -8,7 +8,7 @@ local expressive_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {silent =  true, expr = true})
 end
 
--- Expressive Mapping helper
+-- Defaykt Mapping helper
 local plug_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {})
 end
