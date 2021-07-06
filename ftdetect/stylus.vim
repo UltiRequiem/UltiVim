@@ -1,2 +1,1 @@
-au BufRead,BufNewFile *.styl		set filetype=stylus
-
+au BufRead,BufNewFile *.styl set filetype=stylus
