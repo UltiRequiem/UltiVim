@@ -28,10 +28,6 @@ mapper("n", "<Leader>e", ":qa!<CR>")
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
 
--- Change Buffer
-mapper("n","<C-q>",":bnext<CR>")
-mapper("n","<C-a>",":bprev<CR>")
-
 -- Resize with arrows
 mapper("n", "<C-Up>", ":resize -2<CR>")
 mapper("n", "<C-Down>", ":resize +2<CR>")

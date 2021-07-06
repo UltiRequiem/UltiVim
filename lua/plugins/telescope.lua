@@ -1,4 +1,4 @@
-local sorters,actions,previewers = require ("telescope.sorters"),require('telescope.actions'),require("telescope.previewers")
+local sorters,actions,previewers = require("telescope.sorters"),require('telescope.actions'),require("telescope.previewers")
 
 -- Setup Telescope
 require("telescope").setup {
