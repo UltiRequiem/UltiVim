@@ -82,3 +82,6 @@
 [submodule "pack/plugins/opt/styled"]
 	path = pack/plugins/opt/styled
 	url = https://github.com/styled-components/vim-styled-components
+[submodule "pack/plugins/opt/toml"]
+	path = pack/plugins/opt/toml
+	url = https://github.com/cespare/vim-toml
