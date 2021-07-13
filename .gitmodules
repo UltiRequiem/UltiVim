@@ -1,18 +1,48 @@
-[submodule "pack/plugins/opt/pangloss"]
-	path = pack/plugins/opt/pangloss
-	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/plugins/start/ctral"]
+	path = pack/plugins/start/ctral
+	url = https://github.com/tpope/vim-speeddating
+[submodule "pack/plugins/start/sniprun"]
+	path = pack/plugins/start/sniprun
+	url = https://github.com/michaelb/sniprun
 [submodule "pack/plugins/start/coc.nvim"]
 	path = pack/plugins/start/coc.nvim
-	url = https://github.com/neoclide/coc.nvim/
+	url = https://github.com/neoclide/coc.nvim
 [submodule "pack/plugins/start/dashboard-nvim"]
 	path = pack/plugins/start/dashboard-nvim
 	url = https://github.com/glepnir/dashboard-nvim
+[submodule "pack/plugins/opt/jsxpretty"]
+	path = pack/plugins/opt/jsxpretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule "pack/plugins/opt/pangloss"]
+	path = pack/plugins/opt/pangloss
+	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/plugins/opt/rails"]
+	path = pack/plugins/opt/rails
+	url = https://github.com/tpope/vim-rails
+[submodule "pack/plugins/opt/ruby"]
+	path = pack/plugins/opt/ruby
+	url = https://github.com/vim-ruby/vim-ruby
+[submodule "pack/plugins/opt/styled"]
+	path = pack/plugins/opt/styled
+	url = https://github.com/styled-components/vim-styled-components
+[submodule "pack/plugins/opt/stylus"]
+	path = pack/plugins/opt/stylus
+	url = https://github.com/wavded/vim-stylus
+[submodule "pack/plugins/opt/toml"]
+	path = pack/plugins/opt/toml
+	url = https://github.com/cespare/vim-toml
+[submodule "pack/plugins/start/editorconfig"]
+	path = pack/plugins/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "pack/plugins/start/fugitive"]
+	path = pack/plugins/start/fugitive
+	url = https://github.com/tpope/vim-fugitive
 [submodule "pack/plugins/start/hop.nvim"]
 	path = pack/plugins/start/hop.nvim
 	url = https://github.com/phaazon/hop.nvim
-[submodule "pack/plugins/start/gitsigns.nvim"]
-	path = pack/plugins/start/gitsigns.nvim
-	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "pack/plugins/start/kommentary"]
+	path = pack/plugins/start/kommentary
+	url = https://github.com/b3nj5m1n/kommentary
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
 	url = https://github.com/hoob3rt/lualine.nvim
@@ -21,7 +51,7 @@
 	url = https://github.com/kyazdani42/nvim-tree.lua
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
-	url = https://github.com/kyazdani42/nvim-tree.lua
+	url = https://github.com/kyazdani42/nvim-web-devicons
 [submodule "pack/plugins/start/oceanic-next"]
 	path = pack/plugins/start/oceanic-next
 	url = https://github.com/mhartington/oceanic-next
@@ -31,57 +61,18 @@
 [submodule "pack/plugins/start/popup.nvim"]
 	path = pack/plugins/start/popup.nvim
 	url = https://github.com/nvim-lua/popup.nvim
-[submodule "pack/plugins/start/telescope-fzy-native.nvim"]
-	path = pack/plugins/start/telescope-fzy-native.nvim
-	url = https://github.com/nvim-telescope/telescope-fzy-native.nvim
+[submodule "pack/plugins/start/repeat"]
+	path = pack/plugins/start/repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "pack/plugins/start/surround"]
+	path = pack/plugins/start/surround
+	url = https://github.com/tpope/vim-surround
 [submodule "pack/plugins/start/telescope-media-files.nvim"]
 	path = pack/plugins/start/telescope-media-files.nvim
 	url = https://github.com/nvim-telescope/telescope-media-files.nvim
 [submodule "pack/plugins/start/telescope.nvim"]
 	path = pack/plugins/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
-[submodule "pack/plugins/start/telescope-z.nvim"]
-	path = pack/plugins/start/telescope-z.nvim
-	url = https://github.com/nvim-telescope/telescope-z.nvim
-[submodule "pack/plugins/start/telescope-node-modules"]
-	path = pack/plugins/start/telescope-node-modules
-	url = https://github.com/nvim-telescope/telescope-node-modules.nvim
-[submodule "pack/plugins/opt/rails"]
-	path = pack/plugins/opt/rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "pack/plugins/opt/ruby"]
-	path = pack/plugins/opt/ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "pack/plugins/start/commentary"]
-	path = pack/plugins/start/commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "pack/plugins/start/endwise"]
-	path = pack/plugins/start/endwise
-	url = https://github.com/tpope/vim-endwise
-[submodule "pack/plugins/start/kommentary"]
-	path = pack/plugins/start/kommentary
-	url = https://github.com/b3nj5m1n/kommentary.git
-[submodule "pack/plugins/start/fugitive"]
-	path = pack/plugins/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/tpope/start/surround"]
-	path = vim/pack/tpope/start/surround
-	url = https://github.com/tpope/vim-surround
-[submodule "pack/plugins/start/indent"]
-	path = pack/plugins/start/indent
-	url = https://github.com/Yggdroot/indentLine.git
-[submodule "pack/plugins/opt/stylus"]
-	path = pack/plugins/opt/stylus
-	url = https://github.com/wavded/vim-stylus.git
-[submodule "pack/plugins/start/ctral"]
-	path = pack/plugins/start/ctral
-	url = https://github.com/tpope/vim-speeddating
-[submodule "pack/plugins/opt/jsxpretty"]
-	path = pack/plugins/opt/jsxpretty
-	url = https://github.com/MaxMEllon/vim-jsx-pretty
-[submodule "pack/plugins/opt/styled"]
-	path = pack/plugins/opt/styled
-	url = https://github.com/styled-components/vim-styled-components
-[submodule "pack/plugins/opt/toml"]
-	path = pack/plugins/opt/toml
-	url = https://github.com/cespare/vim-toml
+[submodule "pack/plugins/start/telescope-fzy-native.nvim"]
+	path = pack/plugins/start/telescope-fzy-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzy-native.nvim

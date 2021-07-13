@@ -211,5 +211,10 @@
   "diagnostic.hintSign": " ",
 
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["json", "html", "markdown"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "html",
+    "markdown"
+  ],
+  "clangd.path": "/home/mirai/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 }
