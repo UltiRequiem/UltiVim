@@ -9,10 +9,10 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename'},
+    -- lualine_c = {'filename'},
     -- lualine_d = { "diagnostics", sources = {'coc'}},
-    -- lualine_d = {'coc#status'},
-    -- lualine_d = { 'mode', { 'diagnostics', sources = {'coc'}},
+    -- lualine_c = {'coc#status'},
+    lualine_c = { 'filename', { 'diagnostics', sources = {'coc'}}},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}

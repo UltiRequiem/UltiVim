@@ -68,6 +68,7 @@ mapper("n", "<Leader>o", ":HopPattern<CR>")
 mapper("n", "<C-n>", ":NvimTreeToggle<CR>")
 
 -- Coc.nvim
+mapper("n","<Leader>k",":CocCommand terminal.Toggle<CR>")
 plug_mapper("n", "<leader>rn","<Plug>(coc-rename)")
 plug_mapper("i", "<C-l>","<Plug>(coc-snippets-expand)")
 expressive_mapper("i","<C-space>","coc#refresh()")
