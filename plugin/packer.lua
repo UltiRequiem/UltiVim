@@ -7,7 +7,7 @@ return require('packer').startup(function()
     }
     use 'glepnir/dashboard-nvim'
     use 'tpope/vim-fugitive'
-    use 'phaazon/hop.nvim'
+    use {'phaazon/hop.nvim'}
     use 'b3nj5m1n/kommentary'
     use 'mhartington/oceanic-next'
     use 'hoob3rt/lualine.nvim'
