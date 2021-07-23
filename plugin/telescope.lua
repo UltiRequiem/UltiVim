@@ -10,10 +10,8 @@ require("telescope").setup {
             '--column', '--smart-case'
         },
         initial_mode = "insert",
-        prompt_position = "top",
         prompt_prefix = " ❯",
         file_ignore_patterns = {".git/*", "node_modules", "env/*"},
-        shorten_path = true,
         color_devicons = true,
         winblend = 20,
         file_sorter = sorters.get_fzy_sorter,
@@ -30,11 +28,6 @@ require("telescope").setup {
         }
     },
     extensions = {
-        -- Preview media files
-        media_files = {
-            filetypes = {"png", "jpg", "pdf", "jpeg"},
-            find_cmd = "rg"
-        },
         -- Fast, fast, really fast sorter
         fzy_native = {
             override_generic_sorter = false,
