@@ -56,8 +56,6 @@ mapper('v', '<Leader>P', '"+P"`"`"')
 -- Telescope
 mapper("n", "<C-F>", ":Telescope live_grep<CR>")
 mapper("n", "<C-P>", ":Telescope find_files<CR>")
-mapper("n", ",v", ":lua require('plugins.telescope').search_dotfiles()<CR>")
-mapper("n", ",p", ":Telescope media_files<CR>")
 
 -- Hop.nvim
 mapper("n", "<Leader>f", ":HopWord<CR>")

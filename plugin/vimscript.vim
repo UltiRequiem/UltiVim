@@ -1,3 +1,5 @@
+" The Stuff that I have here don't work in lua,idk why
+
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 

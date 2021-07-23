@@ -44,11 +44,6 @@ vim.g.nvim_tree_icons = {
         symlink = "",
         symlink_open = ""
     },
-    lsp = {
-        hint = " ",
-        info = " ",
-        warning = " ",
-        error = " "
-    }
+    lsp = {hint = " ", info = " ", warning = " ", error = " "}
 }
 vim.cmd("highlight NvimTreeFolderIcon guibg=blue")
