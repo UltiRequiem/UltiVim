@@ -20,8 +20,7 @@ vim.g.mapleader = " "
 mapper("i", "<C-c>", "<Esc>")
 
 -- Nice
-mapper("n", "<Leader>q", ":q<CR>")
-mapper("n", "<Leader>e", ":qa!<CR>")
+mapper("n", "ZE", ":qa!<CR>")
 
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
