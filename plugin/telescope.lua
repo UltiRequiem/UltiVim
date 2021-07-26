@@ -5,7 +5,7 @@ local sorters, actions, previewers = require("telescope.sorters"),
 -- Setup Telescope
 require("telescope").setup {
     defaults = {
-        find_command = {
+        vimgrep_arguments = {
             'rg', '--no-heading', '--with-filename', '--line-number',
             '--column', '--smart-case'
         },

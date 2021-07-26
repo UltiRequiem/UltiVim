@@ -3,6 +3,9 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 nnoremap <silent> K :call <SID>show_documentation()<Enter>
 
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 

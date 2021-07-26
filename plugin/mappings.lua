@@ -20,7 +20,6 @@ vim.g.mapleader = " "
 mapper("i", "<C-c>", "<Esc>")
 
 -- Nice
-mapper("n", "<Leader>w", ":w<CR>")
 mapper("n", "<Leader>q", ":q<CR>")
 mapper("n", "<Leader>e", ":qa!<CR>")
 
