@@ -1,6 +1,7 @@
 -- Mapping helper
 local mapper = function(mode, key, result)
-    vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
+    vim.api.nvim_set_keymap(mode, key, result,
+                            {noremap = true, silent = true, expr = false})
 end
 
 -- Expressive Mapping helper
@@ -8,7 +9,7 @@ local expressive_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {silent = true, expr = true})
 end
 
--- Defaykt Mapping helper
+-- Default Mapping helper
 local plug_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {})
 end
@@ -69,7 +70,6 @@ plug_mapper("i", "<C-l>", "<Plug>(coc-snippets-expand)")
 expressive_mapper("i", "<C-space>", "coc#refresh()")
 mapper("n", "<F3>", ":Format<CR>")
 plug_mapper("n", "gd", "<Plug>(coc-definition)")
--- plug_mapper("n","gx","<Plug>(coc-openlink)")
 plug_mapper("n", "gr", "<Plug>(coc-references)")
 plug_mapper("n", "<leader>ca", "<Plug>(coc-codeaction)")
 plug_mapper("n", "<leader>kf", "<Plug>(coc-fix-current)")
