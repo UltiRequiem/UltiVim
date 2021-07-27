@@ -1,4 +1,8 @@
 vim.cmd [[
   command! -buffer -bar NodeRun :!node %
-  nnoremap <buffer> <Leader>rp :NodeRun<CR>
+  packadd pangloss
 ]]
+
+vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':NodeRun<CR>',
+                            {noremap = true, expr = false, silent = true})
+
