@@ -6,9 +6,6 @@ nnoremap <silent> K :call <SID>show_documentation()<Enter>
 nnoremap  <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -57,7 +54,5 @@ inoremap <silent> <M-Down>  <C-O>m`<C-O>:move +1<CR><C-O>``
 
 vnoremap <silent> <M-Up>    :<C-U>exec "'<,'>move '<-" . (1+v:count1)<CR>gv
 vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
-
-set pumheight=10"
 
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
