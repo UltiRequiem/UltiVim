@@ -60,6 +60,8 @@ mapper('n', '<Leader>P', '"+P')
 mapper('v', '<Leader>p', '"+p')
 mapper('v', '<Leader>P', '"+P"`"`"')
 
+mapper('n', 'J', 'mzJ`z')
+
 -- Plugins Mappings ↓
 
 -- Telescope
