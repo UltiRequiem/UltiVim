@@ -35,8 +35,8 @@ vim.o.pumheight = 10
 
 -- Set colorscheme
 vim.cmd [[
-colorscheme OceanicNext
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+  colorscheme OceanicNext
+  let g:oceanic_next_terminal_bold = 1
+  let g:oceanic_next_terminal_italic = 1
+  let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
 ]]
