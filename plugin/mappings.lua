@@ -32,11 +32,6 @@ mapper("n", "tt", ":t.<CR>")
 --  Toggle Numbers
 mapper("n", "<leader>n", ":set nu! rnu!<CR>")
 
--- Tabs Stuff
-mapper("n", "<S-t>", ":enew<CR>")
-mapper("n", "<C-t>b", ":tabnew<CR>")
-mapper("n", "<S-x>", ":bd!<CR>")
-
 -- use ESC to turn off search highlighting
 mapper("n", "<Esc>", ":noh<CR>")
 
