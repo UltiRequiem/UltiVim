@@ -19,4 +19,8 @@ Refer to [`plugin/mappings.lua`](./plugin/mappings.lua)
 ![Dashboard Screenshot](./utils/assets/dashboard.png)
 ![Text Editor Screenshot](./utils/assets/text-editing.png)
 
-See all screenshots on [`utils/assets/`](./utils/assets).
+See all screenshots on [`utils/assets/`](./utils/assets)
+
+## License
+
+MIT © [UltiRequiem](https://github.com/UltiRequiem)
