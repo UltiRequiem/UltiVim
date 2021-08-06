@@ -12,9 +12,12 @@ My Neovim setup, highly documented to serve as a guide.
 
 ## About
 
-I have used Vim for almost a year as my main editor and now I feel very
+I have used Neovim for almost a year as my main editor and now I feel very
 comfortable using it, so it seemed like a good idea to share my configuration
 as it is well documented.
+
+This configuration requires at least Neovim v0.5 to work,
+although I currently use Neovim v0.6.
 
 ## Mappings
 
@@ -48,7 +51,7 @@ Resize Windows:
 | <kbd>CTRL</kbd><kbd>Left</kbd>  | normal | Vertical Resize -2% |
 | <kbd>CTRL</kbd><kbd>Right</kbd> | normal | Vertical Resize +2% |
 
-All this mappings are defined in their respective ftplugin:
+All this mappings are defined in their respective [`ftplugin`](./ftplugin/):
 
 | Mapping                       | Mode   | Actions                     |
 | :---------------------------- | :----- | :-------------------------- |
@@ -78,7 +81,7 @@ $HOME/.config/nvim
 │ ├── assets/
 │ ├── old-plugins-configuration/
 │ └── etc
-├── ftdetect: Detect filetype not natively supported on Vim
+├── ftdetect: Detect filetypes that are not natively supported
 │ ├── stylus.lua
 │ ├── zig.lua
 │ └── etc
