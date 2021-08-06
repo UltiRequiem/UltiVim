@@ -33,10 +33,22 @@ vim.wo.cursorline = true
 
 vim.o.pumheight = 10
 
--- Set colorscheme
+-- Oceanic Next
+-- vim.cmd [[
+--   packadd oceanic-next
+--   colorscheme OceanicNext
+--   let g:oceanic_next_terminal_bold = 1
+--   let g:oceanic_next_terminal_italic = 1
+-- ]]
+
+-- VSCode Theme
+vim.g.vscode_style = "dark"
+
 vim.cmd [[
-  colorscheme OceanicNext
-  let g:oceanic_next_terminal_bold = 1
-  let g:oceanic_next_terminal_italic = 1
+  packadd vscode
+  colorscheme vscode
+]]
+
+vim.cmd [[
   let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
 ]]

@@ -1,7 +1,7 @@
 require'lualine'.setup {
     options = {
         icons_enabled = true,
-        theme = 'oceanicnext',
+        theme = 'vscode',
         component_separators = {'', ''},
         section_separators = {'', ''},
         disabled_filetypes = {}
