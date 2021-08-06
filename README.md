@@ -8,12 +8,26 @@ My Neovim setup, highly documented to serve as a guide.
 - [Mappings](#Mappings)
 - [Structure](#Structure)
 - [Media](#Media)
+- [License](#License)
 
 ## About
 
 ### Mappings
 
 Leader key: <kbd>space</kbd>
+
+Specif Language Stuff
+| Mapping | Mode | Actions |
+|:------------------------------|:-----|:--------------------------------------|
+| <kbd>space</kbd><kbd>rp</kbd> | n | Go Run current file|
+| <kbd>space</kbd><kbd>rp</kbd> | n | Python Run current file|
+| <kbd>space</kbd><kbd>rp</kbd> | n | Node Run current file|
+| <kbd>space</kbd><kbd>rp</kbd> | n | TypeScript Run current file|
+| <kbd>space</kbd><kbd>rp</kbd> | n | Lua Run current file|
+| <kbd>space</kbd><kbd>rp</kbd> | n | Ruby Run current file|
+| <kbd>space</kbd><kbd>rl</kbd> | n | Ruby Fix current file|
+
+All this mappings are defined in their respective ftplugin.
 
 For the definitions refer to [`plugin/mappings.lua`](./plugin/mappings.lua).
 
