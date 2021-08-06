@@ -6,6 +6,7 @@ My Neovim setup, highly documented to serve as a guide.
 
 - [About](#About)
 - [Mappings](#Mappings)
+- [Structure](#Structure)
 - [Media](#Media)
 
 ## About
@@ -13,6 +14,34 @@ My Neovim setup, highly documented to serve as a guide.
 ### Mappings
 
 Refer to [`plugin/mappings.lua`](./plugin/mappings.lua)
+
+### Structure
+
+```bash
+$HOME/.config/nvim
+├── plugin: General Configuration
+│   ├── mappings.lua
+│   ├── telescope.lua
+│   ├── lualine.lua
+│   └── etc
+├── snippets: snippets in json
+│   ├── javascript.json
+│   └── etc
+├── utils: Some Utils
+│   ├── assets/
+│   ├── old-plugins-configuration/
+│   └── etc
+├── ftdetect: Detect filetype not natively supported on Vim
+│   ├── stylus.lua
+│   ├── zig.lua
+│   └── etc
+├── ftplugin: Per filetype configuration
+│   ├── python.lua
+│   ├── javascript.lua
+│   ├── ruby.lua
+│   └── etc
+└── coc-settings.json: Coc Config
+```
 
 ### Media
 
