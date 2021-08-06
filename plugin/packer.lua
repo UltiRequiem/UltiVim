@@ -26,7 +26,15 @@ return require('packer').startup(function(use)
 
     -- Syntax Highlighting
     use {'pangloss/vim-javascript', ft = {"javascript"}, as = "pangloss"}
-    use {'MaxMEllon/vim-jsx-pretty', ft = {"javascript"}, as = "jsxpretty"}
+    use {
+        'HerringtonDarkholme/yats.vim',
+        ft = {"typescript", "typescriptreact", as = "yats"}
+    }
+    use {
+        'MaxMEllon/vim-jsx-pretty',
+        ft = {"javascriptreact", "typescriptreact"},
+        as = "jsxpretty"
+    }
 
     -- UI Plugins
     use 'glepnir/dashboard-nvim'

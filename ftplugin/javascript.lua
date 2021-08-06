@@ -1,5 +1,6 @@
 vim.cmd [[
   command! -buffer -bar NodeRun :!node %
+  setl formatprg=prettier
   packadd pangloss
 ]]
 
