@@ -13,7 +13,9 @@ My Neovim setup, highly documented to serve as a guide.
 
 ### Mappings
 
-Refer to [`plugin/mappings.lua`](./plugin/mappings.lua)
+Leader key: <kbd>space</kbd>
+
+For the definitions refer to [`plugin/mappings.lua`](./plugin/mappings.lua).
 
 ### Structure
 
@@ -48,8 +50,8 @@ $HOME/.config/nvim
 ![Dashboard Screenshot](./utils/assets/dashboard.png)
 ![Text Editor Screenshot](./utils/assets/text-editing.png)
 
-See all screenshots on [`utils/assets/`](./utils/assets)
+See all screenshots on [`utils/assets/`](./utils/assets).
 
-## License
+### License
 
-MIT © [UltiRequiem](https://github.com/UltiRequiem)
+MIT © [UltiRequiem](https://github.com/UltiRequiem).
