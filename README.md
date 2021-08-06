@@ -17,29 +17,29 @@ Refer to [`plugin/mappings.lua`](./plugin/mappings.lua)
 
 ### Structure
 
-```bash
+```markdown
 $HOME/.config/nvim
 ├── plugin: General Configuration
-│   ├── mappings.lua
-│   ├── telescope.lua
-│   ├── lualine.lua
-│   └── etc
+│ ├── mappings.lua
+│ ├── telescope.lua
+│ ├── lualine.lua
+│ └── etc
 ├── snippets: snippets in json
-│   ├── javascript.json
-│   └── etc
+│ ├── javascript.json
+│ └── etc
 ├── utils: Some Utils
-│   ├── assets/
-│   ├── old-plugins-configuration/
-│   └── etc
+│ ├── assets/
+│ ├── old-plugins-configuration/
+│ └── etc
 ├── ftdetect: Detect filetype not natively supported on Vim
-│   ├── stylus.lua
-│   ├── zig.lua
-│   └── etc
+│ ├── stylus.lua
+│ ├── zig.lua
+│ └── etc
 ├── ftplugin: Per filetype configuration
-│   ├── python.lua
-│   ├── javascript.lua
-│   ├── ruby.lua
-│   └── etc
+│ ├── python.lua
+│ ├── javascript.lua
+│ ├── ruby.lua
+│ └── etc
 └── coc-settings.json: Coc Config
 ```
 
