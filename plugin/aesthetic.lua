@@ -50,5 +50,5 @@ vim.cmd [[
 -- ]]
 
 vim.cmd [[
-  let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+  let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache','yarn.lock','package-lock.json' ]
 ]]
