@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
     -- Packer Itself
     use "wbthomason/packer.nvim"
 
