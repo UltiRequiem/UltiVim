@@ -2,7 +2,15 @@
 
 ## Index
 
+- [About](#About)
+- [Mappings](#Mappings)
 - [Media](#Media)
+
+## About
+
+### Mappings
+
+Refer to [`plugin/mappings.lua`](./plugin/mappings.lua)
 
 ### Media
 
