@@ -1,6 +1,10 @@
 # My NeoVim Configuration
 
-## Media
+## Index
+
+- [Media](#Media)
+
+### Media
 
 ![Dashboard Screenshot](./docs/assets/dashboard.png)
 ![Text Editor Screenshot](./docs/assets/text-editing.png)
