@@ -179,7 +179,6 @@
   "diagnostic-languageserver.formatFiletypes": {
     "lua": "lua-format",
     "sh": "shfmt",
-    "vim": "vint",
     "zsh": "shfmt"
   },
 

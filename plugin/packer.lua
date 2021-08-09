@@ -25,7 +25,11 @@ return require('packer').startup(function(use)
     }
 
     -- Syntax Highlighting
-    use {'pangloss/vim-javascript', ft = {"javascript"}, as = "pangloss"}
+    use {
+        'pangloss/vim-javascript',
+        ft = {"javascript", "javascriptreact"},
+        as = "pangloss"
+    }
     use {
         'HerringtonDarkholme/yats.vim',
         ft = {"typescript", "typescriptreact", as = "yats"}
