@@ -35,4 +35,3 @@ map <expr> <silent> <C-d> <SID>select_current_word()
 
 nnoremap <silent> K :call <SID>show_documentation()<Enter>
 
-nnoremap <c-k> :<c-u>call search("\u")<CR>
