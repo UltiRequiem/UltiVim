@@ -1,4 +1,19 @@
 {
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/usr/lib/jvm/java-14-openjdk",
+      "default": true
+    }
+  ],
+
   "pyright.enable": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoSearchPaths": true,
@@ -163,7 +178,6 @@
   "diagnostic.showUnused": false,
   "diagnostic.enable": true,
   "suggest.defaultSortMethod": "none",
-  "codeLens.enable": true,
   "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
   "diagnostic.format": "%message [%source]",
@@ -174,7 +188,7 @@
   "coc.preferences.enableMarkdown": true,
 
   "tabnine.shortcut": "TabNine",
-  "tabnine.priority": 1,
+  "tabnine.priority": 0,
 
   "diagnostic-languageserver.formatFiletypes": {
     "lua": "lua-format",
@@ -217,6 +231,8 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
+
+  "codeLens.enable": true,
 
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["json", "html", "markdown"],

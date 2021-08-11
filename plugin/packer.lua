@@ -40,6 +40,10 @@ return require('packer').startup(function(use)
         as = "jsxpretty"
     }
 
+    use {"hail2u/vim-css3-syntax", ft = {"css"}, as = "csssyntax"}
+
+    use {"styled-components/vim-styled-components", as = "styled"}
+
     -- UI Plugins
     use 'glepnir/dashboard-nvim'
     use 'hoob3rt/lualine.nvim'
