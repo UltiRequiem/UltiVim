@@ -13,6 +13,8 @@ def dev(todo:str)->None:
     match todo:
         case 'format':
             system("stylua . ; echo 'Project formatted!'")
+        case 'lint':
+            system("luacheck .")
         case _:
             raise BaseException('That is not a valid todo!')
 
