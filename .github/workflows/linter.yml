@@ -20,9 +20,10 @@ jobs:
 
           VALIDATE_YAML: true
           VALIDATE_JSON: true
+          VALIDATE_PYTHON: true
           VALIDATE_MARKDOWN: true
 
-            # Because `vim` global object :(
+          # Because `vim` global object :(
           VALIDATE_LUA: false
 
           OUTPUT_DETAILS: detailed
