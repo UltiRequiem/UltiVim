@@ -4,7 +4,7 @@
 This is just a small imitation of the npm scripts property :)
 """
 
-#  TODO: Pass all the scropt to Lua
+#  TODO: Pass this script to Lua
 
 from sys import argv
 from os import system
