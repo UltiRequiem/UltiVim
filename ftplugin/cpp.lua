@@ -1,1 +1,0 @@
--- All `ftplugin/c.lua` settings are loaded here by default.

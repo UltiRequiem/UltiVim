@@ -1,5 +1,3 @@
-vim.cmd [[
-  setl shiftwidth=4
-  setl tabstop=4
-  setl softtabstop=4
-]]
+vim.bo.shiftwidth=4
+vim.bo.tabstop = 4
+vim.bo.softtabstop=4

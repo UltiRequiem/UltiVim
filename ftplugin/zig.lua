@@ -1,6 +1,4 @@
-vim.cmd [[
-  setlocal expandtab
-  setlocal tabstop=8
-  setlocal softtabstop=4
-  setlocal shiftwidth=4
-]]
+vim.bo.expandtab = true
+vim.bo.tabstop = 8
+vim.bo.softtabstop = 4
+vim.bo.shiftwidth = 4
