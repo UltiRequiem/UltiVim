@@ -3,23 +3,22 @@
 from sys import argv
 from os import system
 
-def dev(todo):
+def dev(todo:str)->None:
     match todo:
         case 'format':
-            system("stylua .")
+            system("stylua . ; echo 'Project formatted!'")
         case _:
             raise BaseException('That is not a valid todo!')
 
-def github(todo):
+def github(todo:str)->None:
     match todo:
         case 'publish':
-            system("git push")
+            system("git push; echo 'Project published!'")
         case _:
             raise BaseException('That is not a valid todo!')
 
 
-
-def main(operation,todo)->None:
+def main(operation:str,todo:str)->None:
     match operation:
         case 'dev':
             dev(todo)

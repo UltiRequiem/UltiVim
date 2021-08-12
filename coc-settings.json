@@ -14,17 +14,14 @@
     }
   ],
 
-  "pyright.enable": true,
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoSearchPaths": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.stubPath": "typings",
+
   "python.analysis.typeshedPaths": [],
   "python.analysis.diagnosticSeverityOverrides": {},
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.useLibraryCodeForTypes": true,
   "python.pythonPath": "/usr/bin/python3.10",
-  "python.venvPath": "",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
   "python.formatting.blackArgs": [],
@@ -37,9 +34,6 @@
   "pyright.disableDiagnostics": false,
   "pyright.completion.snippetSupport": true,
   "pyright.organizeimports.provider": "pyright",
-  "pyright.trace.server": "off",
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintPath": "/usr/bin/pylint",
 
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.showUnused": true,
