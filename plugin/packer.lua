@@ -10,14 +10,26 @@ return require('packer').startup(function(use)
   })
 
   -- Utilities
-  use({ 'phaazon/hop.nvim', opt = true, config = require('hop').setup() })
+  use({
+    'phaazon/hop.nvim',
+    opt = true,
+    config = function()
+      require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
+    end,
+  })
   use('Pocco81/AutoSave.nvim')
   use({ 'tpope/vim-surround', opt = true })
   use({
     'b3nj5m1n/kommentary',
     config = require('kommentary.config').use_extended_mappings(),
   })
-  use({ 'nacro90/numb.nvim', opt = true, config = require('numb').setup() })
+  use({
+    'nacro90/numb.nvim',
+    opt = true,
+    config = function()
+      require('numb').setup()
+    end,
+  })
 
   use({
     'nvim-telescope/telescope.nvim',
