@@ -1,0 +1,36 @@
+#!/usr/bin/env python3.10
+
+from sys import argv
+from os import system
+
+def dev(todo):
+    match todo:
+        case 'format':
+            system("stylua .")
+        case _:
+            raise BaseException('That is not a valid todo!')
+
+def github(todo):
+    match todo:
+        case 'publish':
+            system("git push")
+        case _:
+            raise BaseException('That is not a valid todo!')
+
+
+
+def main(operation,todo)->None:
+    match operation:
+        case 'dev':
+            dev(todo)
+        case 'github':
+            github(todo)
+        case _:
+            raise BaseException('That is not a valid operation!')
+
+
+if __name__ =="__main__":
+    try:
+        main(argv[1],argv[2])
+    except IndexError:
+        print("You are missing parameters!")

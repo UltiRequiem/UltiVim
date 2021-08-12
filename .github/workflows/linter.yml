@@ -16,8 +16,16 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: false          
+          VALIDATE_ALL_CODEBASE: false
+
           VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_MARKDOWN: true
+
+            # Because `vim` global object :(
+          VALIDATE_LUA: false
+
           OUTPUT_DETAILS: detailed
           DEFAULT_BRANCH: main
+
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
