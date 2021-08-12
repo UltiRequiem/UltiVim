@@ -1,6 +1,7 @@
 # UltiVim
 
 ![GitHub Super-Linter](https://github.com/UltiRequiem/UltiVim/workflows/Lint%20Code%20Base/badge.svg)
+![Linting and Style checking](https://github.com/UltiRequiem/UltiVim/actions/workflows/luacheck.yml/badge.svg)
 ![Repo Size](https://img.shields.io/github/repo-size/ultirequiem/UltiVim?style=flat-square&label=Repo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Lines of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/UltiVim?color=blue&label=Total%20Lines)
