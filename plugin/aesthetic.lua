@@ -48,7 +48,3 @@ vim.cmd([[
 --   packadd vscode
 --   colorscheme vscode
 -- ]]
-
-vim.cmd([[
-  let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache','yarn.lock','package-lock.json' ]
-]])
