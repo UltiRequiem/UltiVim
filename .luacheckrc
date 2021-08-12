@@ -1,25 +1,11 @@
--- vim: ft=lua tw=80
-stds.nvim = {
-  globals = {
-    vim = { fields = { 'g' } },
-    'CONFIG_PATH',
-    'CACHE_PATH',
-    'DATA_PATH',
-    'TERMINAL',
-    'USER',
-    'C',
-    'Config',
-    'WORKSPACE_PATH',
-    'JAVA_LS_EXECUTABLE',
-    'MUtils',
-    'USER_CONFIG_PATH',
-    os = { fields = { 'capture' } },
-  },
-  read_globals = { 'jit', 'os', 'vim' },
-}
-
-std = 'lua51+nvim'
-
+-- Don't report unused self arguments of methods.
 self = false
 
+-- Global objects defined by the C code
+globals = {"vim"}
+
 cache = true
+
+exclude_files = {"./plugin/packer_compiled.lua", "./plugin/utils.lua"}
+
+-- vim: ft=lua tw=80
