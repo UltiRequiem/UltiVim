@@ -1,5 +1,4 @@
-vim.cmd [[
+vim.cmd([[
   packadd pangloss
   packadd jsxpretty
-]]
-
+]])

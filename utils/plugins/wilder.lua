@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 packadd wilder
 
 autocmd CmdlineEnter * ++once call s:wilder_init()
@@ -73,4 +73,4 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer({
       \ ],
       \ }))
 endfunction
-]]
+]])
