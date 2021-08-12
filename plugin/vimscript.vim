@@ -3,8 +3,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -35,4 +33,3 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 map <expr> <silent> <C-d> <SID>select_current_word()
 
 nnoremap <silent> K :call <SID>show_documentation()<Enter>
-nmap <leader>rn <Plug>(coc-rename)

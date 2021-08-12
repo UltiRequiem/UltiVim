@@ -187,6 +187,9 @@
   "coc.preferences.willSaveHandlerTimeout": 750,
   "coc.preferences.enableMarkdown": true,
 
+  "Lua.diagnostics.globals": ["vim"],
+
+
   "tabnine.shortcut": "TabNine",
   "tabnine.priority": 0,
 
