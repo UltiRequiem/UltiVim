@@ -20,11 +20,12 @@ jobs:
 
           VALIDATE_YAML: true
           VALIDATE_JSON: true
-          VALIDATE_PYTHON: true
           VALIDATE_MARKDOWN: true
 
           # Because `vim` global object :(
           VALIDATE_LUA: false
+          # Because I'm using edge features from Python 3.10
+          VALIDATE_PYTHON: false
 
           OUTPUT_DETAILS: detailed
           DEFAULT_BRANCH: main
