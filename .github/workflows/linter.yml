@@ -23,9 +23,9 @@ jobs:
           VALIDATE_MARKDOWN: true
 
           # Because `vim` global object :(
-          VALIDATE_LUA: false
+          # VALIDATE_LUA: false
           # Because I'm using edge features from Python 3.10
-          VALIDATE_PYTHON: false
+          # VALIDATE_PYTHON: false
 
           OUTPUT_DETAILS: detailed
           DEFAULT_BRANCH: main
