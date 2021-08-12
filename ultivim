@@ -13,7 +13,7 @@ def dev(todo:str)->None:
 def github(todo:str)->None:
     match todo:
         case 'publish':
-            system("git push; echo 'Project published!'")
+            system("git push &> /dev/null; echo 'Project published!'")
         case _:
             raise BaseException('That is not a valid todo!')
 
