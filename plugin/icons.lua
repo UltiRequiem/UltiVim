@@ -8,8 +8,6 @@ local alternatives = {
 }
 --]]
 
---
-
 require('nvim-web-devicons').setup({
   override = {
     lock = { icon = '', color = '#428850', name = 'lock' },
