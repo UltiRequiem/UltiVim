@@ -106,7 +106,7 @@ $HOME/.config/nvim
 
 See all screenshots on [`utils/assets/`](./utils/assets).
 
-> > Theme: [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next)
+> Theme: [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next)
 
 ### License
 
