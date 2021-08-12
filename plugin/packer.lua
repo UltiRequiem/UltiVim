@@ -65,3 +65,25 @@ return require('packer').startup(function(use)
   use({ 'sindrets/diffview.nvim', opt = true, as = 'diffview' })
   use({ 'gelguy/wilder.nvim', opt = true, as = 'wilder' })
 end)
+
+--[[
+{
+  "dependencies": {
+    "coc-diagnostic": ">=0.21.2",
+    "coc-eslint": ">=1.4.5",
+    "coc-highlight": ">=1.2.8",
+    "coc-json": ">=1.3.6",
+    "coc-lua": ">=1.0.1",
+    "coc-pairs": ">=1.3.0",
+    "coc-prettier": ">=1.1.24",
+    "coc-pyright": ">=1.1.161",
+    "coc-styled-components": ">=0.5.0",
+    "coc-tabnine": ">=1.3.4",
+    "coc-terminal": ">=0.6.0",
+    "coc-toml": ">=1.1.0",
+    "coc-tsserver": ">=1.8.3",
+    "coc-word": ">=1.2.2",
+    "coc-yaml": ">=1.4.2",
+    "coc-yank": ">=1.2.0"
+  }
+} ]]

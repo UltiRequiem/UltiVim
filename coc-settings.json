@@ -1,197 +1,43 @@
 {
-  "java.format.enabled": true,
-  "java.format.onType.enabled": true,
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  "java.format.comments.enabled": true,
-
-  "emmet.includeLanguages": { "javascript": "javascriptreact" },
-
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-11",
-      "path": "/usr/lib/jvm/java-14-openjdk",
-      "default": true
-    }
-  ],
-
+  // Python
   "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.stubPath": "typings",
-
-  "python.analysis.typeshedPaths": [],
-  "python.analysis.diagnosticSeverityOverrides": {},
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.useLibraryCodeForTypes": true,
-  "python.pythonPath": "/usr/bin/python3.10",
+  "python.analysis.typeCheckingMode": "strict",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
-  "python.formatting.blackArgs": [],
-  "python.analysis.extraPaths": [],
-  "python.analysis.logLevel": "Information",
-  "python.linting.enabled": true,
-  "python.linting.ignorePatterns": ["env/*"],
-  "python.linting.lintOnSave": true,
-  "python.linting.maxNumberOfProblems": 100,
-  "pyright.disableDiagnostics": false,
-  "pyright.completion.snippetSupport": true,
-  "pyright.organizeimports.provider": "pyright",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
 
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.showUnused": true,
-  "javascript.updateImportsOnFileMove.enable": true,
-  "javascript.implementationsCodeLens.enable": true,
-  "javascript.referencesCodeLens.enable": true,
-  "javascript.preferences.importModuleSpecifierEnding": "js",
-  "javascript.preferences.quoteStyle": "single",
-  "javascript.preferences.useAliasesForRenames": true,
-  "javascript.validate.enable": true,
-  "javascript.suggestionActions.enabled": true,
-  "javascript.suggest.names": true,
-  "javascript.suggest.enabled": true,
-  "javascript.suggest.paths": true,
-  "javascript.suggest.autoImports": true,
-  "javascript.suggest.completeFunctionCalls": true,
-  "javascript.format.enabled": false,
-  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
-  "javascript.autoClosingTags": true,
-  "javascript.format.semicolons": "insert",
-
-  "docthis.returnsTag": true,
-  "docthis.includeTypes": true,
-  "docthis.includeMemberOfOnClassMembers": true,
-  "docthis.includeMemberOfOnInterfaceMembers": true,
-
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-
-  "tsserver.enable": true,
-  "tsserver.locale": null,
-  "tsserver.log": "verbose",
-  "tsserver.typingsCacheLocation": "",
-  "tsserver.formatOnType": true,
-  "tsserver.enableJavascript": true,
-  "tsserver.maxTsServerMemory": 0,
-  "tsserver.tsdk": "",
-  "tsserver.npm": "",
-  "tsserver.trace.server": "off",
-  "tsserver.pluginPaths": [],
-  "tsserver.debugPort": 0,
-  "tsserver.watchOptions": {},
-  "tsserver.reportStyleChecksAsWarnings": true,
-  "tsserver.implicitProjectConfig.checkJs": false,
-  "tsserver.implicitProjectConfig.experimentalDecorators": true,
-  "tsserver.disableAutomaticTypeAcquisition": false,
-  "tsserver.useBatchedBufferSync": true,
-  "typescript.updateImportsOnFileMove.enable": true,
-  "typescript.implementationsCodeLens.enable": true,
-  "typescript.referencesCodeLens.enable": true,
-  "typescript.preferences.importModuleSpecifierEnding": "auto",
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.suggestionActions.enabled": true,
-  "typescript.validate.enable": true,
-  "typescript.showUnused": true,
+  // Tsserver
   "typescript.autoClosingTags": true,
-  "typescript.suggest.enabled": true,
-  "typescript.suggest.paths": true,
-  "typescript.suggest.autoImports": true,
-  "typescript.preferences.useAliasesForRenames": true,
-  "tsserver.ignoreLocalTsserver": false,
-  "typescript.suggest.completeFunctionCalls": true,
-  "typescript.format.enabled": false,
-  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
-  "typescript.workspaceSymbols.scope": "currentProject",
+  "javascript.autoClosingTags": true,
 
-  "prettier.formatterPriority": 1,
+  // Eslint
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": "/usr/bin/node",
+  "eslint.autoFixOnSave": true,
+
+  // Prettier
   "prettier.eslintIntegration": true,
-  "prettier.requireConfig": false,
-  "prettier.ignorePath": ".prettierignore",
-  "prettier.statusItemText": "Prettier",
-  "prettier.onlyUseLocalVersion": false,
-  "prettier.disableLanguages": [],
-  "prettier.disableSuccessMessage": false,
 
-  "snippets.priority": 1,
-  "snippets.trace": "verbose",
-  "snippets.enableStatusItem": false,
-  "snippets.extends": {
-    "cpp": ["c"],
-    "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
-  },
-  "snippets.shortcut": "S",
-  "snippets.autoTrigger": true,
-  "snippets.triggerCharacters": [],
-  "snippets.loadFromExtensions": true,
-  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets"],
-  "snippets.ultisnips.enable": false,
-  "snippets.ultisnips.usePythonx": true,
-  "snippets.ultisnips.directories": [],
-  "snippets.snipmate.enable": true,
-  "snippets.snipmate.author": "Eliaz Bobadilla",
-
-  "git.semanticCommit.scope": false,
-
-  "lists.disabledLists": [],
-  "list.source.files.command": "",
-  "list.source.files.args": [],
-  "list.source.files.excludePatterns": [],
-  "list.source.mru.maxLength": 50,
-  "list.source.mru.ignoreGitIgnore": true,
-  "list.source.mru.excludePatterns": ["**/.git/*", "/tmp/*"],
-  "list.source.grep.useLiteral": true,
-  "list.source.grep.command": "rg",
-  "list.source.grep.maxColumns": 300,
-
-  "terminal.REPLMappings": {
-    "c": "cling",
-    "cpp": "cling",
-    "javascript": "node",
-    "typescript": "ts-node",
-    "python": "python"
-  },
-  "terminal.shellPath": "/usr/bin/zsh",
-  "terminal.shellArgs": [],
-
-  "pairs.disableLanguages": [],
-  "pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
-  "pairs.enableBackspace": true,
-  "pairs.alwaysPairCharacters": [],
-
-  "solargraph.diagnostics": true,
-
-  "json.enable": true,
-  "json.trace.server": "off",
-  "json.execArgv": [],
-  "json.format.enable": false,
-  "json.maxItemsComputed": 2500,
-  "json.schemaDownload.enable": true,
-  "json.schemas": [],
-
-  "coc.preferences.extensionUpdateCheck": "weekly",
-  "diagnostic.level": "hint",
-  "signature.target": "echo",
-  "suggest.timeout": 5000,
-  "diagnostic.showUnused": false,
-  "diagnostic.enable": true,
-  "suggest.defaultSortMethod": "none",
-  "coc.source.around.firstMatch": false,
-  "coc.source.file.ignoreHidden": false,
-  "diagnostic.format": "%message [%source]",
-  "diagnostic.virtualText": true,
-  "diagnostic.checkCurrentLine": true,
-  "diagnostic.separateRelatedInformationAsDiagnostics": true,
-  "coc.preferences.willSaveHandlerTimeout": 750,
-  "coc.preferences.enableMarkdown": true,
-
+  // Lua
   "Lua.diagnostics.globals": ["vim"],
 
+  // Tabnine
   "tabnine.shortcut": "TabNine",
-  "tabnine.priority": 0,
+  "tabnine.priority": 1,
 
+  // Diagnostic Sever
   "diagnostic-languageserver.formatFiletypes": {
-    "lua": "lua-format",
+    "lua": "stylua",
     "sh": "shfmt",
     "zsh": "shfmt"
   },
 
+  // Yank
+  "yank.limit": 50,
+  "yank.list.maxsize": 100,
+
+  // Completion Icons
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
@@ -221,37 +67,13 @@
     "default": "  "
   },
 
-  "coc.preferences.colorSupport": true,
-
+  // Linting Icons
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
 
-  "codeLens.enable": true,
-
-  "coc.preferences.formatOnType": true,
-
-  "cSpell.userWords": [
-    "Archlinux",
-    "Autofollower",
-    "Bobadilla",
-    "Dotfiles",
-    "Eliaz",
-    "Gloaded",
-    "Neovim",
-    "Platzi",
-    "Quoteran",
-    "Ranmess",
-    "Roadmap",
-    "Senati",
-    "Tkinker",
-    "Ulti",
-    "Zetta",
-    "dotifles",
-    "nvim",
-    "plusplus",
-    "pyright",
-    "typeshed"
-  ]
+  // CoC
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.formatOnType": true
 }

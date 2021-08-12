@@ -6,8 +6,9 @@ This is just a small imitation of the npm scripts property :)
 
 #  TODO: Pass this script to Lua
 
-from sys import argv
 from os import system
+from sys import argv
+
 
 def dev(todo:str)->None:
     match todo:
@@ -15,6 +16,8 @@ def dev(todo:str)->None:
             system("stylua . ; echo 'Project formatted!'")
         case 'lint':
             system("luacheck .")
+        case 'fix':
+            system("./ultivim dev format && ./ultivim dev lint")
         case _:
             raise BaseException('That is not a valid todo!')
 
