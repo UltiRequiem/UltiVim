@@ -1,7 +1,7 @@
 {
   // Python
   "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeCheckingMode": "basic",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
   "python.linting.mypyEnabled": true,
