@@ -7,7 +7,21 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
-  // Tsserver
+  // Java
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/usr/lib/jvm/java-11-openjdk/",
+      "default": true
+    }
+  ],
+
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+
+  // Javascript and TypeScript
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
