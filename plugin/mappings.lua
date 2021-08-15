@@ -89,7 +89,7 @@ plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
 
 -- TODO: Pass to Lua
-vim.cmd [[
+vim.cmd([[
 nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
 nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>``
 
@@ -98,4 +98,4 @@ vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
 
 nnoremap  <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-]]
+]])

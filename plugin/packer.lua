@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
   use({ 'tpope/vim-markdown', opt = true, as = 'markdown' })
   use({ 'MaxMEllon/vim-jsx-pretty', opt = true, as = 'jsxpretty' })
   use({ 'hail2u/vim-css3-syntax', opt = true, as = 'csssyntax' })
+  use({ 'ziglang/zig.vim', opt = true, as = 'ziglang' })
   use({ 'cespare/vim-toml', opt = true, as = 'toml' })
   use({ 'styled-components/vim-styled-components', opt = true, as = 'styled' })
 
