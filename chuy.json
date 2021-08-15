@@ -1,0 +1,4 @@
+{
+  "format": "stylua .",
+  "lint": "luacheck ."
+}

@@ -83,7 +83,19 @@ plug_mapper('n', '<leader>ga', '<Plug>(coc-codeaction-cursor)')
 plug_mapper('x', '<leader>ga', '<Plug>(coc-codeaction-selected)')
 plug_mapper('n', '<leader>kf', '<Plug>(coc-fix-current)')
 
-plug_mapper('n', '<Up>', '<Plug>(coc-diagnostic-prev)')
-plug_mapper('n', '<Down>', '<Plug>(coc-diagnostic-next)')
+plug_mapper('n', '<Right>', '<Plug>(coc-diagnostic-prev)')
+plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
+
+-- TODO: Pass to Lua
+vim.cmd [[
+nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
+nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>``
+
+vnoremap <silent> <M-Up>    :<C-U>exec "'<,'>move '<-" . (1+v:count1)<CR>gv
+vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
+
+nnoremap  <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+]]

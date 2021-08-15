@@ -89,5 +89,32 @@
 
   // CoC
   "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnType": true
+  "coc.preferences.formatOnType": true,
+  "cSpell.userWords": [
+    "Archlinux",
+    "Bobadilla",
+    "Dotfiles",
+    "Eliaz",
+    "Moji",
+    "Neovim",
+    "Paru",
+    "Ulti",
+    "Wifi",
+    "alsa",
+    "amixer",
+    "chuy",
+    "devel",
+    "dkms",
+    "dosen't",
+    "localectl",
+    "luacheck",
+    "makepkg",
+    "nmcli",
+    "noto",
+    "pacman",
+    "pylint",
+    "pytest",
+    "stylua",
+    "timedatectl"
+  ]
 }
