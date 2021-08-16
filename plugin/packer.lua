@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
   use({ 'ziglang/zig.vim', opt = true, as = 'ziglang' })
   use({ 'cespare/vim-toml', opt = true, as = 'toml' })
   use({ 'styled-components/vim-styled-components', opt = true, as = 'styled' })
+  use({ 'udalov/kotlin-vim', opt = true, as = 'kotvim' })
 
   -- UI Plugins
   use('glepnir/dashboard-nvim')

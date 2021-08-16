@@ -17,7 +17,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-14",
-      "path": "/usr/lib/jvm/jdk-14.0.2",
+      "path": "/usr/lib/jvm/default",
       "default": true
     }
   ],
@@ -104,10 +104,13 @@
     "Moji",
     "Neovim",
     "Paru",
+    "Pyrigth",
     "Ulti",
+    "Wallger",
     "Wifi",
     "alsa",
     "amixer",
+    "bspwm",
     "chuy",
     "devel",
     "dkms",
@@ -115,14 +118,19 @@
     "localectl",
     "luacheck",
     "makepkg",
+    "nfsw",
     "nmcli",
     "noto",
     "nvim",
     "pacman",
+    "pyautogui",
     "pylint",
     "pytest",
     "regist",
+    "runtimes",
+    "sabare",
     "stylua",
-    "timedatectl"
+    "timedatectl",
+    "wallhaven"
   ]
 }
