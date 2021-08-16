@@ -7,6 +7,12 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
+  // Zig
+  "zig.enabled": true,
+  "zig.startUpMessage": true,
+  "zig.path": "zls",
+  "zig.debugLog": false,
+
   // Java
   "java.configuration.runtimes": [
     {
@@ -111,9 +117,11 @@
     "makepkg",
     "nmcli",
     "noto",
+    "nvim",
     "pacman",
     "pylint",
     "pytest",
+    "regist",
     "stylua",
     "timedatectl"
   ]

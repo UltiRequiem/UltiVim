@@ -13,7 +13,7 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_python_provider = 0
 
 -- Load Python 3 Provider
-vim.g.loaded_python3_provider = 0
+-- vim.g.loaded_python3_provider = 0
 -- vim.g.python3_host_prog = '/usr/bin/python'
 
 -- Deactivate plugins in $RUNTIME
