@@ -1,5 +1,4 @@
 vim.cmd([[
-  packadd yats
   command! -buffer -bar NodeRun :!ts-node %
 ]])
 

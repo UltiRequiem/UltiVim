@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
       require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
     end,
   })
+
   use('Pocco81/AutoSave.nvim')
   use({ 'tpope/vim-surround', opt = true })
   use({
@@ -41,15 +42,7 @@ return require('packer').startup(function(use)
   })
 
   -- Syntax Highlighting
-  use({ 'pangloss/vim-javascript', opt = true, as = 'pangloss' })
-  use({ 'HerringtonDarkholme/yats.vim', opt = true, as = 'yats' })
-  use({ 'tpope/vim-markdown', opt = true, as = 'markdown' })
-  use({ 'MaxMEllon/vim-jsx-pretty', opt = true, as = 'jsxpretty' })
-  use({ 'hail2u/vim-css3-syntax', opt = true, as = 'csssyntax' })
-  use({ 'ziglang/zig.vim', opt = true, as = 'ziglang' })
-  use({ 'cespare/vim-toml', opt = true, as = 'toml' })
-  use({ 'styled-components/vim-styled-components', opt = true, as = 'styled' })
-  use({ 'udalov/kotlin-vim', opt = true, as = 'kotvim' })
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
   -- UI Plugins
   use('glepnir/dashboard-nvim')

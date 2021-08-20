@@ -7,12 +7,6 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
-  // Zig
-  "zig.enabled": true,
-  "zig.startUpMessage": true,
-  "zig.path": "zls",
-  "zig.debugLog": false,
-
   // Java
   "java.configuration.runtimes": [
     {
@@ -26,6 +20,9 @@
   "java.format.onType.enabled": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
 
   // Javascript and TypeScript
   "typescript.autoClosingTags": true,
@@ -87,6 +84,29 @@
     "default": "  "
   },
 
+  "suggest.highPrioritySourceLimit": 10,
+  "suggest.languageSourcePriority": 95,
+  "suggest.lowPrioritySourceLimit": 90,
+
+  "coc.source.file.priority": 60,
+  "coc.source.buffer.priority": 50,
+  "snippets.priority": 90,
+  "yank.priority": 10,
+  "suggest.triggerCompletionWait": 30,
+
+  "suggest.autoTrigger": "always",
+  "suggest.localityBonus": true,
+  "suggest.fixInsertedWord": true,
+  "suggest.enablePreselect": true,
+  "suggest.removeDuplicateItems": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.defaultSortMethod": "alphabetical",
+  "suggest.numberSelect": false,
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.detailField": "menu",
+  "suggest.keepCompleteopt": false,
+  "suggest.noselect": false,
+
   // Linting Icons
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
@@ -101,36 +121,8 @@
     "Bobadilla",
     "Dotfiles",
     "Eliaz",
-    "Moji",
     "Neovim",
     "Paru",
-    "Pyrigth",
-    "Ulti",
-    "Wallger",
-    "Wifi",
-    "alsa",
-    "amixer",
-    "bspwm",
-    "chuy",
-    "devel",
-    "dkms",
-    "dosen't",
-    "localectl",
-    "luacheck",
-    "makepkg",
-    "nfsw",
-    "nmcli",
-    "noto",
-    "nvim",
-    "pacman",
-    "pyautogui",
-    "pylint",
-    "pytest",
-    "regist",
-    "runtimes",
-    "sabare",
-    "stylua",
-    "timedatectl",
-    "wallhaven"
+    "Platzi"
   ]
 }

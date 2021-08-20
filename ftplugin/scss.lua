@@ -1,3 +1,0 @@
-vim.cmd([[
-  setl iskeyword+=@-@
-]])
