@@ -56,5 +56,4 @@ return require('packer').startup(function(use)
 
   -- Themes
   use({ 'mhartington/oceanic-next', opt = false, as = 'nextocean' })
-
 end)
