@@ -27,4 +27,4 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 map <expr> <silent> <C-d> <SID>select_current_word()
 
-nnoremap <silent> K :call <SID>show_documentation()<Enter>
+map <silent> K :call <SID>show_documentation()<Enter>
