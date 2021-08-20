@@ -9,6 +9,17 @@ return require('packer').startup(function(use)
         run = 'yarn install --frozen-lockfile'
     })
 
+    use({
+        'mfussenegger/nvim-dap',
+        as = "dap",
+        opt = true,
+        requires = {
+            {'nvim-telescope/telescope-dap.nvim', as = "teledap"},
+            {"rcarriga/nvim-dap-ui", as = "dapui"},
+            {"mfussenegger/nvim-dap-python", as = "dapy"}
+        }
+    })
+
     -- Utilities
     use({
         'phaazon/hop.nvim',
@@ -20,7 +31,7 @@ return require('packer').startup(function(use)
 
     use('Pocco81/AutoSave.nvim')
 
-    use('kdheepak/lazygit.nvim')
+    use({'kdheepak/lazygit.nvim', opt = true})
 
     use('lewis6991/gitsigns.nvim')
 
