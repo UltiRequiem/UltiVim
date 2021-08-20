@@ -20,7 +20,12 @@ return require('packer').startup(function(use)
 
     use('Pocco81/AutoSave.nvim')
 
+    use('kdheepak/lazygit.nvim')
+
+    use('lewis6991/gitsigns.nvim')
+
     use({'tpope/vim-surround', opt = false})
+
     use({
         'b3nj5m1n/kommentary',
         config = require('kommentary.config').use_extended_mappings()

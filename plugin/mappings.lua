@@ -69,6 +69,9 @@ mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 mapper('n', '<Leader>f', ':HopWord<CR>')
 mapper('n', '<Leader>o', ':HopPattern<CR>')
 
+-- LazyGIT
+mapper('n', '<Leader>gg', ':LazyGit<CR>')
+
 -- Switch Theme
 mapper('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 
