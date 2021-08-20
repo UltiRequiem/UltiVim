@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
   -- Utilities
   use({
     'phaazon/hop.nvim',
-    opt = true,
+    opt = false,
     config = function()
       require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
     end,
@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
   })
   use({
     'nacro90/numb.nvim',
-    opt = true,
+    opt = false,
     config = function()
       require('numb').setup()
     end,
@@ -54,11 +54,9 @@ return require('packer').startup(function(use)
   })
 
   -- Themes
-  use({ 'mhartington/oceanic-next', opt = true, as = 'nextocean' })
-  use({ 'Mofiqul/vscode.nvim', opt = true, as = 'vscode' })
+  use({ 'mhartington/oceanic-next', opt = false, as = 'nextocean' })
 
   -- Ocationals Plugins
-  use({ 'sindrets/diffview.nvim', opt = true, as = 'diffview' })
   use({ 'gelguy/wilder.nvim', opt = true, as = 'wilder' })
 end)
 

@@ -35,7 +35,6 @@ vim.o.pumheight = 10
 
 -- Oceanic Next
 vim.cmd([[
-  packadd nextocean
   colorscheme OceanicNext
   let g:oceanic_next_terminal_bold = 1
   let g:oceanic_next_terminal_italic = 1

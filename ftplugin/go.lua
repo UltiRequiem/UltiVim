@@ -3,3 +3,6 @@ vim.cmd([[
 ]])
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':GoRun<CR>', { noremap = true, expr = false, silent = true })
+
+-- Indent with Spaces
+vim.bo.expandtab = true
