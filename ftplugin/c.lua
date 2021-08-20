@@ -1,8 +1,9 @@
 vim.cmd([[
-  command! -buffer -bar CRun :!gcc % && ./a.out && rm a.out
+  command! -buffer -bar CRun :!gcc % && ./a.out;rm -rf ./a.out
 ]])
 
-vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':CRun<CR>', { noremap = true, expr = false, silent = true })
+vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':CRun<CR>',
+                            {noremap = true, expr = false, silent = true})
 
 vim.bo.shiftwidth = 2
 vim.bo.tabstop = 2
