@@ -4,6 +4,8 @@ self = false
 -- Global objects defined by the C code
 globals = {"vim"}
 
+allow_defined = true
+
 cache = true
 
 exclude_files = {"./plugin/packer_compiled.lua", "./plugin/utils.lua"}
