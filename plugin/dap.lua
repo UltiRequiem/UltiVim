@@ -1,7 +1,3 @@
-vim.cmd([[
-  command! -bar Debug :lua Dap()
-]])
-
 function Dap()
     -- Load Plugins
 

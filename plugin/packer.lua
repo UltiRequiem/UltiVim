@@ -13,12 +13,15 @@ return require('packer').startup(function(use)
         'mfussenegger/nvim-dap',
         as = "dap",
         opt = true,
+        configuration = function() Dap() end,
         requires = {
             {'nvim-telescope/telescope-dap.nvim', as = "teledap"},
             {"rcarriga/nvim-dap-ui", as = "dapui"},
             {"mfussenegger/nvim-dap-python", as = "dapy"}
         }
     })
+
+    use({'puremourning/vimspector', opt = true})
 
     -- Utilities
     use({
