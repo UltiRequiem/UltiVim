@@ -69,6 +69,9 @@ mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 mapper('n', '<Leader>f', ':HopWord<CR>')
 mapper('n', '<Leader>o', ':HopPattern<CR>')
 
+-- Switch Theme
+mapper('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
+
 -- Coc.nvim
 mapper('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
 mapper('n', '<F3>', ':Format<CR>')

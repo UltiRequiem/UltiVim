@@ -45,7 +45,7 @@
 
   // Diagnostic Sever
   "diagnostic-languageserver.formatFiletypes": {
-    "lua": "stylua",
+    "lua": "lua-format",
     "sh": "shfmt",
     "zsh": "shfmt"
   },
