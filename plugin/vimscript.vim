@@ -1,4 +1,4 @@
-syntax off
+" syntax off
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
