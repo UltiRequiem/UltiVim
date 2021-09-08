@@ -1,5 +1,3 @@
-" syntax off
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -24,7 +22,7 @@ inoremap <silent><expr> <TAB>
 
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 map <expr> <silent> <C-d> <SID>select_current_word()
