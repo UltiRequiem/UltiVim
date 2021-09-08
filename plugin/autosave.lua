@@ -1,14 +1,14 @@
-local autosave = require('autosave')
+function AutoSave()
+  require('autosave').setup({
+    enabled = true,
+    execution_message = 'Saved at:' .. vim.fn.strftime('%H:%M:%S'),
+    events = { 'InsertLeave', 'TextChanged' },
+    conditions = { exists = true, filetype_is_not = {}, modifiable = true },
+    write_all_buffers = false,
+    on_off_commands = true,
+    clean_command_line_interval = 0,
+    debounce_delay = 135,
+  })
 
-autosave.setup({
-  enabled = true,
-  execution_message = 'Saved at:' .. vim.fn.strftime('%H:%M:%S'),
-  events = { 'InsertLeave', 'TextChanged' },
-  conditions = { exists = true, filetype_is_not = {}, modifiable = true },
-  write_all_buffers = false,
-  on_off_commands = true,
-  clean_command_line_interval = 0,
-  debounce_delay = 135,
-})
-
-vim.g.auto_save = true
+  vim.g.auto_save = true
+end

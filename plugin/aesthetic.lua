@@ -33,4 +33,4 @@ vim.wo.cursorline = true
 
 vim.o.pumheight = 10
 
-require('material').set()
+vim.cmd('colorscheme material')

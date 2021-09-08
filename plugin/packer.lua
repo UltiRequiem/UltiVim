@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
     end,
   })
 
-  use('Pocco81/AutoSave.nvim')
+  use({ 'Pocco81/AutoSave.nvim', opt = true })
 
   use({
     'AckslD/nvim-neoclip.lua',
