@@ -4,6 +4,8 @@ self = false
 -- Global objects defined by the C code
 globals = {"vim"}
 
+ignore={"542"}
+
 allow_defined = true
 
 cache = true

@@ -1,0 +1,12 @@
+{
+  "Insert quoted text": {
+    "prefix": "quote",
+    "body": "> ${1:${TM_SELECTED_TEXT}}",
+    "description": "Insert quoted text"
+  },
+  "Insert link": {
+    "prefix": "link",
+    "body": "[${1:text}](${2:link})$0",
+    "description": "Insert link"
+  }
+}

@@ -56,6 +56,25 @@
     "zsh": "shfmt"
   },
 
+  // Snippets
+  "snippets.priority": 1,
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnips",
+  "snippets.shortcut": "S",
+  "snippets.autoTrigger": true,
+  "snippets.triggerCharacters": [],
+  "snippets.loadFromExtensions": true,
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/textmate"],
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.usePythonx": true,
+  "snippets.ultisnips.directories": ["UltiSnips"],
+  "snippets.snipmate.enable": true,
+  "snippets.snipmate.author": "Eliaz Bobadilla",
+
   // Yank
   "yank.limit": 50,
   "yank.list.maxsize": 100,
@@ -96,7 +115,6 @@
 
   "coc.source.file.priority": 60,
   "coc.source.buffer.priority": 50,
-  "snippets.priority": 90,
   "yank.priority": 10,
   "suggest.triggerCompletionWait": 30,
 
