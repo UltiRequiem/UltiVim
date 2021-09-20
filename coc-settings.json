@@ -36,9 +36,6 @@
   "eslint.nodePath": "/usr/bin/node",
   "eslint.autoFixOnSave": true,
 
-  // Prettier
-  "prettier.eslintIntegration": true,
-
   // Css
   "css.validate": false,
   "less.validate": false,

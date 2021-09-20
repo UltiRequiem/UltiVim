@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
 
   use({ 'Pocco81/AutoSave.nvim', opt = true })
 
+  use({'wakatime/vim-wakatime',opt=false})
+
   use({
     'AckslD/nvim-neoclip.lua',
     config = function()
