@@ -42,6 +42,7 @@ vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_zip = 1
 vim.g.loaded_zipPlugin = 1
 vim.g.vimsyn_embed = 1
+vim.g.did_load_filetypes = 1
 
 -- Set Shell
 vim.g.shell = '/usr/bin/zsh'
