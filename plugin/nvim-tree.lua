@@ -1,5 +1,3 @@
-vim.g.nvim_tree_side = 'right'
-vim.g.nvim_tree_width = 35
 vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
 vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_indent_markers = 1
@@ -11,7 +9,6 @@ vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_add_trailing = 0
 vim.g.nvim_tree_group_empty = 0
-vim.g.nvim_tree_lsp_diagnostics = 1
 vim.g.nvim_tree_disable_window_picker = 1
 vim.g.nvim_tree_icon_padding = ' '
 
@@ -44,11 +41,21 @@ vim.g.nvim_tree_icons = {
 require'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
+  lsp_diagnostics     = true,
   update_focused_file = {
     enable      = true,
     update_cwd  = false,
     ignore_list = {}
-  }
+  },
+    view = {
+      width = 35,
+      side = 'right',
+      auto_resize = false,
+      mappings = {
+        custom_only = false,
+        list = {}
+      }
+    }
 }
 
 vim.cmd('highlight NvimTreeFolderIcon guibg=blue')
