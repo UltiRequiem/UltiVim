@@ -19,8 +19,7 @@ vim.g.mapleader = ' '
 -- Escape from insert mode
 mapper('i', '<C-c>', '<Esc>')
 
--- When I have a new buffer and need to put the name this useful
-mapper('n', '<C-s>', ':w ')
+mapper('n', '<C-s>', ':w<CR>')
 
 -- Nice
 mapper('n', 'ZE', ':qa!<CR>')
@@ -59,18 +58,15 @@ mapper('n', 'J', 'mzJ`z')
 -- Plugins Mappings ↓
 
 -- Telescope
-mapper('n', '<C-F>', ':Telescope live_grep<CR>')
-mapper('n', '<C-P>', ':Telescope find_files<CR>')
+mapper('n', 'z', ':Telescope live_grep<CR>')
+mapper('n', 'm', ':Telescope find_files<CR>')
 
 -- Tree
 mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 
 -- Hop.nvim
-mapper('n', '<Leader>f', ':HopWord<CR>')
-mapper('n', '<Leader>o', ':HopPattern<CR>')
-
--- LazyGIT
-mapper('n', '<Leader>gg', ':LazyGit<CR>')
+mapper('n', 'f', ':HopWord<CR>')
+mapper('n', '<Leader>f', ':HopPattern<CR>')
 
 -- Switch Theme
 mapper('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])

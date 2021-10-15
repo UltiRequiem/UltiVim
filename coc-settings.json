@@ -3,7 +3,7 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/usr/bin/black",
+  // "python.formatting.blackPath": "black",
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
@@ -25,7 +25,7 @@
   "java.selectionRange.enabled": true,
 
   // Emmet
-  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  // "emmet.includeLanguages": { "javascript": "javascriptreact" },
 
   // Javascript and TypeScript
   "typescript.autoClosingTags": true,
@@ -54,6 +54,10 @@
     "lua": "lua-format",
     "sh": "shfmt",
     "zsh": "shfmt"
+  },
+
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint"
   },
 
   // Snippets
