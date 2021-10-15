@@ -1,7 +1,5 @@
 # UltiVim
 
-
-![Linting Lua](https://github.com/UltiRequiem/UltiVim/actions/workflows/luacheck.yml/badge.svg)
 ![GitHub Super-Linter](https://github.com/UltiRequiem/UltiVim/workflows/Lint%20Code%20Base/badge.svg)
 ![Repo Size](https://img.shields.io/github/repo-size/ultirequiem/UltiVim?style=flat-square&label=Repo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -113,4 +111,3 @@ See all screenshots on [`utils/assets/`](./utils/assets).
 ### License
 
 MIT © [UltiRequiem](https://github.com/UltiRequiem).
-
