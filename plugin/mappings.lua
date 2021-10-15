@@ -58,15 +58,15 @@ mapper('n', 'J', 'mzJ`z')
 -- Plugins Mappings ↓
 
 -- Telescope
-mapper('n', 'z', ':Telescope live_grep<CR>')
-mapper('n', 'm', ':Telescope find_files<CR>')
+mapper('n', '<C-F>', ':Telescope live_grep<CR>')
+mapper('n', '<C-P>', ':Telescope find_files<CR>')
 
 -- Tree
 mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 
 -- Hop.nvim
-mapper('n', 'f', ':HopWord<CR>')
-mapper('n', '<Leader>f', ':HopPattern<CR>')
+mapper('n', '<Leader>f', ':HopWord<CR>')
+mapper('n', '<Leader>o', ':HopPattern<CR>')
 
 -- Switch Theme
 mapper('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])

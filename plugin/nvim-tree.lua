@@ -1,4 +1,4 @@
-vim.g.nvim_tree_ignore = { '.git',  '.cache' }
+vim.g.nvim_tree_ignore = { '.git', '.cache' }
 vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_root_folder_modifier = ':~'
@@ -37,25 +37,34 @@ vim.g.nvim_tree_icons = {
   lsp = { hint = ' ', info = ' ', warning = ' ', error = ' ' },
 }
 
+require('nvim-tree').setup({
+  disable_netrw = true,
+  hijack_netrw = true,
 
-require'nvim-tree'.setup {
-  disable_netrw       = true,
-  hijack_netrw        = true,
-  lsp_diagnostics     = true,
-  update_focused_file = {
-    enable      = true,
-    update_cwd  = false,
-    ignore_list = {}
+  diagnostics = {
+    enable = false,
+    icons = {
+      hint = '',
+      info = '',
+      warning = '',
+      error = '',
+    },
   },
-    view = {
-      width = 35,
-      side = 'right',
-      auto_resize = false,
-      mappings = {
-        custom_only = false,
-        list = {}
-      }
-    }
-}
+
+  update_focused_file = {
+    enable = true,
+    update_cwd = false,
+    ignore_list = {},
+  },
+  view = {
+    width = 35,
+    side = 'right',
+    auto_resize = false,
+    mappings = {
+      custom_only = false,
+      list = {},
+    },
+  },
+})
 
 vim.cmd('highlight NvimTreeFolderIcon guibg=blue')
