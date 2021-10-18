@@ -3,7 +3,7 @@
 -- ]])
 
 vim.cmd([[
-  command! -buffer -bar Run :!NO_COLOR=true deno run %
+  command! -buffer -bar Run :!NO_COLOR=true deno --no-check run %
 ]])
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':Run<CR>', { noremap = true, expr = false, silent = true })
