@@ -61,7 +61,7 @@ require('packer').startup(function(use)
 
   -- UI Plugins
   use('glepnir/dashboard-nvim')
-  use('hoob3rt/lualine.nvim')
+  use('nvim-lualine/lualine.nvim')
   use('p00f/nvim-ts-rainbow')
   use('akinsho/nvim-bufferline.lua')
   use({
