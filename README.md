@@ -19,11 +19,11 @@ My Neovim setup, highly documented to serve as a guide.
 ## About
 
 I have used Neovim for almost a year as my main editor and now I feel very
-comfortable using it, so it seemed like a good idea to share my configuration
-as it is well documented.
+comfortable using it, so it seemed like a good idea to share my configuration as
+it is well documented.
 
-This configuration requires at least Neovim v0.5 to work,
-although I currently use Neovim v0.6.
+This configuration requires at least Neovim v0.5 to work, although I currently
+use Neovim v0.6.
 
 ## Mappings
 
@@ -106,7 +106,8 @@ $HOME/.config/nvim
 
 See all screenshots on [`utils/assets/`](./utils/assets).
 
-> Theme: [marko-cerovac/material.nvim](https://github.com/marko-cerovac/material.nvim)
+> Theme:
+> [marko-cerovac/material.nvim](https://github.com/marko-cerovac/material.nvim)
 
 ### License
 
