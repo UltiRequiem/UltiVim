@@ -145,7 +145,7 @@
   "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnType": true,
 
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
 
   "languageserver": {
   "ocaml-lsp": {

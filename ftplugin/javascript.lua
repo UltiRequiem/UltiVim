@@ -1,7 +1,6 @@
--- vim.cmd([[
---   command! -buffer -bar Run :!node %
--- ]])
-
+vim.cmd([[
+  command! -buffer -bar NodeRun :!node %
+]])
 
 vim.cmd([[
   command! -buffer -bar Run :!NO_COLOR=true deno run --no-check %

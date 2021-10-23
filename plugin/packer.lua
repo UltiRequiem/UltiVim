@@ -73,6 +73,15 @@ require('packer').startup(function(use)
   use({ 'marko-cerovac/material.nvim', opt = false, as = 'material' })
 
   -- Ocasional Plugins
+
+  use({
+    'tanvirtin/vgit.nvim',
+    opt = true,
+    config = function()
+      require('vgit').setup()
+    end,
+  })
+
   use({ 'kdheepak/lazygit.nvim', opt = true })
 
   use({
