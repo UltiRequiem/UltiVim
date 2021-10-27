@@ -22,7 +22,7 @@ endfunc
 map <expr> <silent> <C-d> <SID>select_current_word()
 
 
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <c-t>
       \ pumvisible() ? "\<C-n>" :
       \ v:lua.check_back_space() ? "\<Tab>" :
       \ coc#refresh()
