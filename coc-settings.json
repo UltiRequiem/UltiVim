@@ -46,11 +46,11 @@
   "Lua.diagnostics.globals": ["vim"],
 
   // Deno
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.unstable": true,
-  "prettier.disableLanguages": ["javascript", "typescript", "json"],
-  "tsserver.enable": false,
+  // "deno.enable": true,
+  // "deno.lint": true,
+  // "deno.unstable": true,
+  // "prettier.disableLanguages": ["javascript", "typescript", "json"],
+  // "tsserver.enable": false,
 
   // Tabnine
   "tabnine.shortcut": "TabNine",

@@ -2,6 +2,8 @@ require('packer').startup(function(use)
   -- Packer Itself
   use('wbthomason/packer.nvim')
 
+  use({'github/copilot.vim'})
+
   -- LSP Provider
   use({
     'neoclide/coc.nvim',
