@@ -160,5 +160,8 @@
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason"]
     }
-  }
+  },
+  "cSpell.userWords": [
+    "MERN"
+  ]
 }
