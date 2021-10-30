@@ -25,7 +25,7 @@
   "java.selectionRange.enabled": true,
 
   // Emmet
-  // "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
 
   // Javascript and TypeScript
   "typescript.autoClosingTags": true,
@@ -162,6 +162,7 @@
     }
   },
   "cSpell.userWords": [
-    "MERN"
+    "MERN",
+    "ultirequiem"
   ]
 }
