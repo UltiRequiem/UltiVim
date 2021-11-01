@@ -163,6 +163,13 @@
   },
   "cSpell.userWords": [
     "MERN",
+    "asyncio",
+    "bindgen",
+    "camelcase",
+    "copero",
+    "deno",
+    "moongose",
+    "randomstring",
     "ultirequiem"
   ]
 }

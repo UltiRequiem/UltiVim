@@ -1,10 +1,8 @@
-vim.g.nvim_tree_ignore = { '.git', '.cache' }
 vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_root_folder_modifier = ':~'
 vim.g.vim_tree_tab_open = 1
 vim.g.nvim_tree_width_allow_resize = 1
-vim.g.nvim_tree_hide_dotfiles = 0
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_add_trailing = 0
@@ -56,6 +54,12 @@ require('nvim-tree').setup({
     update_cwd = false,
     ignore_list = {},
   },
+
+    filters = {
+    dotfiles = false,
+    custom = {'.git'}
+  },
+
   view = {
     width = 35,
     side = 'right',

@@ -1,5 +1,5 @@
 vim.cmd([[
-  command! -buffer -bar Run :!python3.10 %
+  command! -buffer -bar Run :!python %
   command! -buffer -bar PoetryRun :!poetry run python %
 ]])
 
