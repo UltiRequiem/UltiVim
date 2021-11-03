@@ -15,18 +15,11 @@ function! s:select_current_word()
   if !get(b:, 'coc_cursors_activated', 0)
     return "\<Plug>(coc-cursors-word)"
   endif
+
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
 
-
 map <expr> <silent> <C-d> <SID>select_current_word()
-
-
-inoremap <silent><expr> <c-t>
-      \ pumvisible() ? "\<C-n>" :
-      \ v:lua.check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
