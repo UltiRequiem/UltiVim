@@ -17,6 +17,6 @@ require('nvim-web-devicons').setup({
     rpm = { icon = '', color = '#428850', name = 'rpm' },
     mp3 = { icon = '', color = '#428850', name = 'mp3' },
     mp4 = { icon = '', color = '#428850', name = 'mp4' },
-    cjs = {icon = '', color = '#428850', name = 'cjs'},
+    cjs = { icon = '', color = '#428850', name = 'cjs' },
   },
 })

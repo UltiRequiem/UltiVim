@@ -162,6 +162,8 @@
     }
   },
   "cSpell.userWords": [
+    "Bobadilla",
+    "Eliaz",
     "MERN",
     "asyncio",
     "bindgen",
@@ -170,6 +172,7 @@
     "deno",
     "moongose",
     "randomstring",
+    "snippetmode",
     "ultirequiem"
   ]
 }

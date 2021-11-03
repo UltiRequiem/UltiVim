@@ -55,9 +55,9 @@ require('nvim-tree').setup({
     ignore_list = {},
   },
 
-    filters = {
+  filters = {
     dotfiles = false,
-    custom = {'.git'}
+    custom = { '.git' },
   },
 
   view = {
