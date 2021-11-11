@@ -34,5 +34,5 @@ vim.wo.cursorline = true
 vim.o.pumheight = 10
 
 -- Theme
-vim.g.material_style = "palenight"
+vim.g.material_style = 'palenight'
 vim.cmd('colorscheme material')
