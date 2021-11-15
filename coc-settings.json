@@ -7,6 +7,9 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
+  // Rust
+  "rust-analyzer.inlayHints.typeHints": false,
+
   // Java
   "java.configuration.runtimes": [
     {
@@ -185,24 +188,31 @@
     "copero",
     "deno",
     "dotenv",
+    "dpage",
     "euphi",
     "fatih",
     "gclal",
     "gclone",
     "kratos",
     "lelouch",
+    "middlewares",
     "minmax",
     "mongodb",
     "monika",
     "moongose",
+    "mypy",
     "nats",
     "natsuki",
+    "pgadmin",
     "phpunit",
+    "postgresql",
+    "psql",
     "pydantic",
     "pymongo",
     "randomstring",
     "sayori",
     "snippetmode",
+    "struct",
     "ultirequiem",
     "uvicorn"
   ]

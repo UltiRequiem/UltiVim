@@ -78,6 +78,8 @@ require('packer').startup(function(use)
     },
   })
 
+  use({'RishabhRD/nvim-cheat.sh',requires={'RishabhRD/popfix'}})
+
   -- Syntax Highlighting
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
