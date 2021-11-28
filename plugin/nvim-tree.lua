@@ -1,4 +1,3 @@
-vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_root_folder_modifier = ':~'
 vim.g.vim_tree_tab_open = 1
