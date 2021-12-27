@@ -12,6 +12,10 @@ require('telescope').setup({
       '--column',
       '--smart-case',
     },
+    layout_strategy = 'horizontal',
+     layout_config = {
+      vertical = { width = 0.95, anchor=2 }
+    },
     initial_mode = 'insert',
     prompt_prefix = ' ❯',
     file_ignore_patterns = { '.git/*', 'node_modules', 'env/*' },
