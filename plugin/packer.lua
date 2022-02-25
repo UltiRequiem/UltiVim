@@ -13,10 +13,11 @@ require('packer').startup(function(use)
 
   -- Utilities
   use({
-    'phaazon/hop.nvim',
-    config = function()
-      require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
-    end,
+      'phaazon/hop.nvim',
+        branch = 'v1',
+       config = function()
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
   })
 
   use({
