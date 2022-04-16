@@ -22,10 +22,8 @@ vim.o.splitright = true
 -- Enables 24-bit RGB color in TUI
 vim.o.termguicolors = true
 
--- Dark Background
 vim.o.background = 'dark'
 
--- Use Emoji
 vim.o.emoji = true
 
 -- Highlight the screen line of the cursor with CursorLine

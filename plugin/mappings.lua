@@ -1,9 +1,9 @@
 local expressive_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, { silent = true, expr = true })
+        vim.api.nvim_set_keymap(mode, key, result, { silent = true, expr = true })
 end
 
 local plug_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, {})
+        vim.api.nvim_set_keymap(mode, key, result, {})
 end
 
 -- Define Mapleader

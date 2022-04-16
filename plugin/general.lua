@@ -27,57 +27,57 @@ vim.o.undodir = vim.fn.expand(data .. '/undo//')
 vim.o.inccommand = 'split'
 
 local wildignored = {
-  'tags',
-  '*/__pycache__/*',
-  'build/*',
-  'build.?/*',
-  '*/node_modules/*',
-  '*/env/*',
-  '*.png',
-  '*.jpg',
-  '*.jpeg',
-  '*/migrations/*',
-  '*/.git/*',
+        'tags',
+        '*/__pycache__/*',
+        'build/*',
+        'build.?/*',
+        '*/node_modules/*',
+        '*/env/*',
+        '*.png',
+        '*.jpg',
+        '*.jpeg',
+        '*/migrations/*',
+        '*/.git/*',
 }
 
 local wildignore = ''
 for i = 1, #wildignored do
-  wildignore = wildignore .. wildignored[i] .. ','
+        wildignore = wildignore .. wildignored[i] .. ','
 end
 
 vim.o.wildignore = wildignore
 
 local suffixesed = {
-  '.aux',
-  '.log',
-  '.dvi',
-  '.bbl',
-  '.blg',
-  '.brf',
-  '.cb',
-  '.ind',
-  '.idx',
-  '.ilg',
-  '.inx',
-  '.out',
-  '.toc',
-  '.o',
-  '.obj',
-  '.dll',
-  '.class',
-  '.pyc',
-  '.ipynb',
-  '.so',
-  '.swp',
-  '.zip',
-  '.exe',
-  '.jar',
-  '.gz',
+        '.aux',
+        '.log',
+        '.dvi',
+        '.bbl',
+        '.blg',
+        '.brf',
+        '.cb',
+        '.ind',
+        '.idx',
+        '.ilg',
+        '.inx',
+        '.out',
+        '.toc',
+        '.o',
+        '.obj',
+        '.dll',
+        '.class',
+        '.pyc',
+        '.ipynb',
+        '.so',
+        '.swp',
+        '.zip',
+        '.exe',
+        '.jar',
+        '.gz',
 }
 
 local suffixes = ''
 for i = 1, #suffixesed do
-  suffixes = suffixes .. suffixesed[i] .. ','
+        suffixes = suffixes .. suffixesed[i] .. ','
 end
 
 vim.o.suffixes = suffixes

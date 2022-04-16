@@ -1,105 +1,37 @@
 {
-  // Python
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
   "python.formatting.provider": "black",
-  // "python.formatting.blackPath": "black",
+  "python.formatting.blackPath": "black",
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
-  // Rust
   "rust-analyzer.inlayHints.typeHints": false,
 
-  // Java
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-14",
-      "path": "/usr/lib/jvm/default",
-      "default": true
-    }
-  ],
-
-  "java.format.enabled": true,
-  "java.format.onType.enabled": true,
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  "java.format.comments.enabled": true,
-  "java.signatureHelp.enabled": true,
-  "java.saveActions.organizeImports": true,
-  "java.selectionRange.enabled": true,
-
-  // Emmet
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "svelte": "html"
   },
 
-  // Javascript and TypeScript
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
-  // Svelte
   "svelte.enable-ts-plugin": true,
 
-  // Eslint
   "eslint.packageManager": "yarn",
   "eslint.nodePath": "/usr/bin/node",
   "eslint.autoFixOnSave": true,
 
-  // Css
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   "wxss.validate": false,
 
-  // Lua
   "Lua.diagnostics.globals": ["vim"],
 
-  // Deno
-  // "deno.enable": true,
-  // "deno.lint": true,
-  // "deno.unstable": true,
-  // "prettier.disableLanguages": ["javascript", "typescript", "json"],
-  // "tsserver.enable": false,
-
-  // Tabnine
   "tabnine.shortcut": "TabNine",
   "tabnine.priority": 1,
 
-  // Diagnostic Sever
-  "diagnostic-languageserver.formatFiletypes": {
-    "lua": "lua-format",
-    "sh": "shfmt",
-    "zsh": "shfmt"
-  },
-
-  "diagnostic-languageserver.filetypes": {
-    "vim": "vint"
-  },
-
-  // Snippets
-  "snippets.priority": 1,
-  "snippets.extends": {
-    "cpp": ["c"],
-    "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
-  },
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnips",
-  "snippets.shortcut": "S",
-  "snippets.autoTrigger": true,
-  "snippets.triggerCharacters": [],
-  "snippets.loadFromExtensions": true,
-  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/textmate"],
-  "snippets.ultisnips.enable": true,
-  "snippets.ultisnips.usePythonx": true,
-  "snippets.ultisnips.directories": ["UltiSnips"],
-  "snippets.snipmate.enable": true,
-  "snippets.snipmate.author": "Eliaz Bobadilla",
-
-  // Yank
-  "yank.limit": 50,
-  "yank.list.maxsize": 100,
-
-  // Completion Icons
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
@@ -149,22 +81,10 @@
   "suggest.keepCompleteopt": false,
   "suggest.noselect": false,
 
-  // Linting Icons
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
 
-  // CoC
-  "coc.preferences.formatOnType": true,
-
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
-
-  "languageserver": {
-    "ocaml-lsp": {
-      "command": "opam",
-      "args": ["config", "exec", "--", "ocamllsp"],
-      "filetypes": ["ocaml", "reason"]
-    }
-  }
+  "coc.preferences.formatOnType": true
 }
