@@ -3,11 +3,4 @@ vim.cmd([[
   command! -buffer -bar PoetryRun :!poetry run python %
 ]])
 
-vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>rp', ':Run<CR>', { noremap = true, expr = false, silent = true })
-
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
-vim.bo.softtabstop = 4
-
--- Indent with Spaces
-vim.bo.expandtab = true
+vim.keymap.set("n","<leader>rp","<cmd>:Run<cr>",{silent=true, buffer=true})
