@@ -1,31 +1,8 @@
 # UltiVim
 
-![GitHub Super-Linter](https://github.com/UltiRequiem/UltiVim/workflows/Lint%20Code%20Base/badge.svg)
-![Repo Size](https://img.shields.io/github/repo-size/ultirequiem/UltiVim?style=flat-square&label=Repo)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Lines of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/UltiVim?color=blue&label=Total%20Lines)
-[![GitMoji](https://img.shields.io/badge/Gitmoji-%F0%9F%8E%A8%20-FFDD67.svg)](https://gitmoji.dev)
-
 My Neovim setup, highly documented to serve as a guide.
 
 [Check my whole Dotfiles!](https://github.com/UltiRequiem/dotfiles)
-
-## Index
-
-- [About](#About)
-- [Mappings](#Mappings)
-- [Structure](#Structure)
-- [Media](#Media)
-- [License](#License)
-
-## About
-
-I have used Neovim for almost a year as my main editor and now I feel very
-comfortable using it, so it seemed like a good idea to share my configuration as
-it is well documented.
-
-This configuration requires at least Neovim v0.5 to work, although I currently
-use Neovim v0.6.
 
 ## Mappings
 
@@ -73,35 +50,7 @@ All this mappings are defined in their respective [`ftplugin`](./ftplugin/):
 
 For the definitions refer to [`plugin/mappings.lua`](./plugin/mappings.lua).
 
-## Structure
-
-```markdown
-$HOME/.config/nvim
-├── plugin: General Configuration
-│ ├── mappings.lua
-│ ├── telescope.lua
-│ ├── lualine.lua
-│ └── etc
-├── snippets: snippets in json
-│ ├── javascript.json
-│ └── etc
-├── utils: Some Utils
-│ ├── assets/
-│ ├── old-plugins-configuration/
-│ └── etc
-├── ftdetect: Detect filetypes that are not natively supported
-│ ├── stylus.lua
-│ ├── zig.lua
-│ └── etc
-├── ftplugin: Per filetype configuration
-│ ├── python.lua
-│ ├── javascript.lua
-│ ├── ruby.lua
-│ └── etc
-└── coc-settings.json: Coc Config
-```
-
-### Media
+## Media
 
 ![Dashboard Screenshot](./utils/assets/dashboard.png)
 ![Text Editor Screenshot](./utils/assets/text-editing.png)
@@ -111,6 +60,6 @@ See all screenshots on [`utils/assets/`](./utils/assets).
 > Theme:
 > [marko-cerovac/material.nvim](https://github.com/marko-cerovac/material.nvim)
 
-### License
+## License
 
-MIT © [UltiRequiem](https://github.com/UltiRequiem).
+Released under the MIT License.
