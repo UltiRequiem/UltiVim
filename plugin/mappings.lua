@@ -1,9 +1,7 @@
--- Expressive Mapping helper
 local expressive_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(mode, key, result, { silent = true, expr = true })
 end
 
--- Default Mapping helper
 local plug_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(mode, key, result, {})
 end
@@ -47,21 +45,16 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 
 -- Plugins Mappings ↓
 
--- Telescope
 vim.keymap.set('n', '<C-F>', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<C-P>', ':Telescope find_files<CR>')
 
--- Tree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 
--- Hop.nvim
 vim.keymap.set('n', '<Leader>f', ':HopWord<CR>')
 vim.keymap.set('n', '<Leader>o', ':HopPattern<CR>')
 
--- Switch Theme
 vim.keymap.set('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 
--- Coc.nvim
 vim.keymap.set('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
 vim.keymap.set('n', '<F3>', ':call CocAction("format")<CR>')
 
@@ -80,7 +73,6 @@ plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
 
--- TODO: Pass to Lua
 vim.cmd([[
 nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
 nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>``
