@@ -63,7 +63,7 @@ vim.keymap.set('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggl
 
 -- Coc.nvim
 vim.keymap.set('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
-vim.keymap.set('n', '<F3>', ':Format<CR>')
+vim.keymap.set('n', '<F3>', ':call CocAction("format")<CR>')
 
 plug_mapper('n', '<leader>rn', '<Plug>(coc-rename)')
 
