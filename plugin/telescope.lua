@@ -1,17 +1,21 @@
 local sorters, actions, previewers =
   require('telescope.sorters'), require('telescope.actions'), require('telescope.previewers')
 
+local rip_grep_config = {
+  'rg',
+  '--no-heading',
+  '--with-filename',
+  '--line-number',
+  '--column',
+  '--smart-case',
+}
+
 -- Setup Telescope
-require('telescope').setup({
+local telescope = require('telescope')
+
+telescope.setup({
   defaults = {
-    vimgrep_arguments = {
-      'rg',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-    },
+    vimgrep_arguments = rip_grep_config,
     layout_strategy = 'horizontal',
      layout_config = {
       vertical = { width = 0.95, anchor=2 }
@@ -44,4 +48,4 @@ require('telescope').setup({
 })
 
 -- Load Telescope extensions
-require('telescope').load_extension('fzy_native')
+telescope.load_extension('fzy_native')

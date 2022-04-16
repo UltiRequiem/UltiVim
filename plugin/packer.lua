@@ -2,7 +2,7 @@ require('packer').startup(function(use)
   -- Packer Itself
   use('wbthomason/packer.nvim')
 
-  use({ 'github/copilot.vim' })
+  use('github/copilot.vim')
 
   -- LSP Provider
   use({
@@ -42,7 +42,7 @@ require('packer').startup(function(use)
 
   use({ 'Pocco81/AutoSave.nvim', opt = true })
 
-  use({ 'wakatime/vim-wakatime', opt = false })
+  use({ 'wakatime/vim-wakatime', opt = true })
 
   use({
     'AckslD/nvim-neoclip.lua',
@@ -50,6 +50,7 @@ require('packer').startup(function(use)
       require('neoclip').setup()
       require('telescope').load_extension('neoclip')
     end,
+    opt = true
   })
 
   use('lewis6991/gitsigns.nvim')
@@ -68,6 +69,7 @@ require('packer').startup(function(use)
     config = function()
       require('numb').setup()
     end,
+    opt = true
   })
 
   use({
@@ -78,8 +80,6 @@ require('packer').startup(function(use)
       'nvim-telescope/telescope-fzy-native.nvim',
     },
   })
-
-  use({'RishabhRD/nvim-cheat.sh',requires={'RishabhRD/popfix'}})
 
   -- Syntax Highlighting
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
