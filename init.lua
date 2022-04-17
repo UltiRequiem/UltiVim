@@ -1,4 +1,3 @@
-
 local data = vim.fn.stdpath('data')
 
 vim.wo.foldenable = false
