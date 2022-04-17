@@ -1,11 +1,12 @@
-vim.cmd([[
-  compiler deno
-]])
-
 --[[
 Deno Code Style
 https://deno.land/manual/tools/formatter#configuration
 --]]
+
+
+vim.cmd([[
+  compiler deno
+]])
 
 vim.bo.expandtab = true
 vim.bo.shiftwidth = 2
