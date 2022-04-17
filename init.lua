@@ -225,6 +225,8 @@ plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
 
+vim.keymap.set("n","<Leader>rp",":make<CR>")
+
 vim.cmd([[
 nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
 nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>``
