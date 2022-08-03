@@ -86,5 +86,13 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
 
-  "coc.preferences.formatOnType": true
+  "coc.preferences.formatOnType": true,
+
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    }
+  }
 }
