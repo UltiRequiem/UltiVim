@@ -21,6 +21,6 @@ https://eloquentjavascript.net/04_data.html#i_nSTX34CM1M
 
 # note
 
-nowadays I'm working with .net or very customized monorepos that only vscode correctly understands
+nowadays I'm working with .net(Visual Studio) or very customized monorepos that only vscode correctly understands
 
 so this config is mostly for my open sorce work, which is rust,go,deno,node.js, ruby, and python stuff
