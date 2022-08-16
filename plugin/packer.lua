@@ -61,6 +61,7 @@ require('packer').startup(function(use)
                 requires = {
                         'nvim-lua/popup.nvim',
                         'nvim-lua/plenary.nvim',
+                        'nvim-telescope/telescope-file-browser.nvim',
                         'nvim-telescope/telescope-fzy-native.nvim',
                 },
         })
@@ -106,7 +107,7 @@ require('packer').startup(function(use)
 
         use({ 'ellisonleao/glow.nvim', run = 'GlowInstall', opt = true })
 
-        use({ 'Pocco81/TrueZen.nvim', opt = true })
+        use({ 'Pocco81/true-zen.nvim', opt = true })
 
         use({
                 'pwntester/octo.nvim',
@@ -116,7 +117,7 @@ require('packer').startup(function(use)
                 end,
         })
 
-        use({ 'Pocco81/AutoSave.nvim', opt = true })
+        use({ 'Pocco81/auto-save.nvim', opt = true })
 
         use({ 'wakatime/vim-wakatime', opt = true })
 

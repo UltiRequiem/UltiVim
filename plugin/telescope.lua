@@ -49,3 +49,5 @@ telescope.setup({
 
 -- Load Telescope extensions
 telescope.load_extension('fzy_native')
+
+telescope.load_extension('file_browser')

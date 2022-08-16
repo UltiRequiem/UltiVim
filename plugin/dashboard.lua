@@ -1,11 +1,8 @@
--- Grep
-vim.g.dashboard_default_executive = 'telescope'
+local db = require "dashboard"
 
--- Custo Footer
-vim.g.dashboard_custom_footer = { 'Gureto desu yo, koitsu wa.' }
+local home = os.getenv('HOME')
 
--- Custom Header
-vim.g.dashboard_custom_header = {
+db.custom_header = {
         '██╗░░░██╗██╗░░░░░████████╗██╗██╗░░░██╗██╗███╗░░░███╗',
         '██║░░░██║██║░░░░░╚══██╔══╝██║██║░░░██║██║████╗░████║',
         '██║░░░██║██║░░░░░░░░██║░░░██║╚██╗░██╔╝██║██╔████╔██║',
@@ -14,26 +11,30 @@ vim.g.dashboard_custom_header = {
         '░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝',
 }
 
--- Dashboard Sections
-vim.g.dashboard_custom_section = {
-        a = {
-                description = { '  Find File          ' },
-                command = 'Telescope find_files',
+db.custom_center = {
+        {icon = '  ',
+                desc = 'Recently opened files                   ',
+                action =  'Telescope oldfiles',
         },
-        b = {
-                description = { '  Recently Used Files' },
-                command = 'Telescope oldfiles',
+        {icon = '  ',
+                desc = 'Find  File                              ',
+                action = 'Telescope find_files find_command=rg,--hidden,--files',
         },
-        c = {
-                description = { '  Find Word          ' },
-                command = 'Telescope live_grep',
+        {icon = '  ',
+                desc ='File Browser                            ',
+                action =  'Telescope file_browser',
         },
-        d = {
-                description = { ' Change Color sheme  ' },
-                command = 'Telescope colorscheme',
-        },
-        e = {
-                description = { '  Settings           ' },
-                command = ':e ~/.config/nvim/init.lua',
+        {icon = '  ',
+                desc = 'Find  word                              ',
+                action = 'Telescope live_grep',
         },
 }
+
+
+db.custom_footer = {
+        'Gureto desu yo, koitsu wa.',
+}
+
+db.header_pad = 3
+db.center_pad = 3
+db.footer_pad = 3

@@ -8,7 +8,7 @@ vim.g.loaded_ruby_provider = 0
 
 -- Deactivate Node Provider
 vim.g.loaded_node_provider = 0
--- vim.g.node_host_prog = '/usr/bin/node'
+vim.g.node_host_prog = '/home/ulti/.config/nvm/versions/node/v16.17.0/bin/node'
 
 -- Deactivate Python 2 Provider
 vim.g.loaded_python_provider = 0
