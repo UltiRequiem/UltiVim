@@ -46,15 +46,7 @@ require('packer').startup(function(use)
                 config = function()
                         require('kommentary.config').use_extended_mappings()
                 end,
-        })
-
-        use({
-                'nacro90/numb.nvim',
-                config = function()
-                        require('numb').setup()
-                end,
-                opt = true
-        })
+        });
 
         use({
                 'nvim-telescope/telescope.nvim',
@@ -80,55 +72,6 @@ require('packer').startup(function(use)
         })
 
         -- Themes
-        use({ 'marko-cerovac/material.nvim', opt = false, as = 'material' })
-
-        -- Ocasional Plugins
-
-        use({
-                'tanvirtin/vgit.nvim',
-                opt = true,
-                config = function()
-                        require('vgit').setup()
-                end,
-        })
-
-        use({ 'kdheepak/lazygit.nvim', opt = true })
-
-        use({
-                'lukas-reineke/indent-blankline.nvim',
-                opt = true,
-                config = function()
-                        require('indent_blankline').setup({
-                                char = '|',
-                                buftype_exclude = { 'terminal', 'dashboard' },
-                        })
-                end,
-        })
-
-        use({ 'ellisonleao/glow.nvim', run = 'GlowInstall', opt = true })
-
-        use({ 'Pocco81/true-zen.nvim', opt = true })
-
-        use({
-                'pwntester/octo.nvim',
-                opt = true,
-                config = function()
-                        require('octo').setup()
-                end,
-        })
-
-        use({ 'Pocco81/auto-save.nvim', opt = true })
-
-        use({ 'wakatime/vim-wakatime', opt = true })
-
-        use({
-                'AckslD/nvim-neoclip.lua',
-                config = function()
-                        require('neoclip').setup()
-                        require('telescope').load_extension('neoclip')
-                end,
-                opt = true
-        })
-
+        use({ 'marko-cerovac/material.nvim', as = 'material' });
 
 end)

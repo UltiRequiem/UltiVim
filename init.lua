@@ -41,6 +41,7 @@ local wildignored = {
 }
 
 local wildignore = ''
+
 for i = 1, #wildignored do
         wildignore = wildignore .. wildignored[i] .. ','
 end

@@ -25,12 +25,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-augroup mygroup
-  autocmd!
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
 nmap <leader>cl  <Plug>(coc-codelens-action)
 
 xmap if <Plug>(coc-funcobj-i)
