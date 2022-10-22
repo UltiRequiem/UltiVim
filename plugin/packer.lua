@@ -17,26 +17,6 @@ require('packer').startup(function(use)
                 end
         })
 
-        use({
-                'andweeb/presence.nvim',
-                config = function()
-                        require('presence'):setup({
-                                auto_update = true,
-                                neovim_image_text = 'The One True Text Editor',
-                                main_image = 'neovim',
-                                client_id = '793271441293967371',
-                                log_level = nil,
-                                debounce_timeout = 10,
-                                enable_line_number = false,
-                                blacklist = {},
-                                buttons = true,
-
-                                editing_text = 'Editing %s',
-                                file_explorer_text = 'Browsing %s',
-                        })
-                end,
-        })
-
         use('lewis6991/gitsigns.nvim')
 
         use('tpope/vim-surround')
@@ -66,6 +46,7 @@ require('packer').startup(function(use)
         use('nvim-lualine/lualine.nvim')
         use('p00f/nvim-ts-rainbow')
         use('akinsho/nvim-bufferline.lua')
+
         use({
                 'kyazdani42/nvim-tree.lua',
                 requires = { 'kyazdani42/nvim-web-devicons' },
@@ -73,5 +54,4 @@ require('packer').startup(function(use)
 
         -- Themes
         use({ 'marko-cerovac/material.nvim', as = 'material' });
-
 end)

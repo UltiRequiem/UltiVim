@@ -203,8 +203,7 @@ vim.keymap.set('n', '<C-P>', ':Telescope find_files<CR>')
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 
-vim.keymap.set('n', '<Leader>f', ':HopWord<CR>')
-vim.keymap.set('n', '<Leader>o', ':HopPattern<CR>')
+vim.keymap.set('n', '<Leader>o', ':HopWord<CR>')
 
 vim.keymap.set('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 
@@ -226,7 +225,7 @@ plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
 
-vim.keymap.set("n","<Leader>rp",":make<CR>")
+vim.keymap.set("n","<leader>rp",":make<CR>")
 
 vim.cmd([[
 nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
