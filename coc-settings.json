@@ -6,7 +6,6 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
 
-  "rust-analyzer.inlayHints.typeHints": false,
 
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
@@ -77,8 +76,7 @@
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "suggest.defaultSortMethod": "alphabetical",
   "suggest.triggerAfterInsertEnter": false,
-  "suggest.detailField": "menu",
-  "suggest.keepCompleteopt": false,
+  "suggest.detailField": "preview",
   "suggest.noselect": false,
 
   "diagnostic.errorSign": " ",
