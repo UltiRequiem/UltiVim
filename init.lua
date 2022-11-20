@@ -220,6 +220,8 @@ expressive_mapper('i', '<C-space>', 'coc#refresh()')
 vim.keymap.set("n","<leader>rp",":make<CR>")
 
 vim.cmd([[
+filetype plugin indent on
+
 nnoremap <silent> <M-Up>    :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>``
 nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>``
 

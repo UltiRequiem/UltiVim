@@ -1,7 +1,7 @@
 require('packer').startup(function(use)
         use('wbthomason/packer.nvim')
 
-        use('github/copilot.vim')
+        -- use('github/copilot.vim') Not free
 
         use({
                 'neoclide/coc.nvim',
