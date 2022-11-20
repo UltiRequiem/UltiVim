@@ -103,8 +103,6 @@ vim.o.errorformat = vim.o.errorformat .. ',%f'
 
 vim.o.mouse = 'a'
 
-vim.o.ttyfast = true
-
 vim.o.background = 'dark'
 
 vim.o.ff = 'unix'
@@ -125,6 +123,8 @@ vim.o.relativenumber = true
 vim.wo.wrap = false
 vim.o.wrap = false
 
+vim.o.textwidth = 30
+
 -- But don't break words, only 'by words'
 vim.wo.linebreak = true
 
@@ -136,8 +136,6 @@ vim.o.splitright = true
 
 -- Enables 24-bit RGB color in TUI
 vim.o.termguicolors = true
-
-vim.o.background = 'dark'
 
 vim.o.emoji = true
 
@@ -162,14 +160,8 @@ end
 -- Define Mapleader
 vim.g.mapleader = ' '
 
--- Escape from insert mode
-vim.keymap.set('i', '<C-c>', '<Esc>')
-
 -- Duplicate Line
 vim.keymap.set('n', 'tt', ':t.<CR>')
-
--- Toggle Numbers
-vim.keymap.set('n', '<leader>n', ':set nu! rnu!<CR>')
 
 -- Turn off search highlighting
 vim.keymap.set('n', '<Esc>', ':noh<CR>')
