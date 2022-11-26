@@ -123,7 +123,7 @@ vim.o.relativenumber = true
 vim.wo.wrap = false
 vim.o.wrap = false
 
-vim.o.textwidth = 30
+-- vim.o.textwidth = 30
 
 -- But don't break words, only 'by words'
 vim.wo.linebreak = true

@@ -1,8 +1,6 @@
 require('packer').startup(function(use)
         use('wbthomason/packer.nvim')
 
-        -- use('github/copilot.vim') Not free
-
         use({
                 'neoclide/coc.nvim',
                 branch = 'master',
@@ -16,8 +14,6 @@ require('packer').startup(function(use)
                         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
                 end
         })
-
-        use('lewis6991/gitsigns.nvim')
 
         use('tpope/vim-surround')
 
@@ -39,12 +35,14 @@ require('packer').startup(function(use)
         })
 
         -- Syntax Highlighting
-        use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+        use({
+                'nvim-treesitter/nvim-treesitter',
+                run = ':TSUpdate', requires= {"p00f/nvim-ts-rainbow"}
+        })
 
         -- UI Plugins
         use('glepnir/dashboard-nvim')
         use('nvim-lualine/lualine.nvim')
-        use('p00f/nvim-ts-rainbow')
         use('akinsho/nvim-bufferline.lua')
 
         use({
