@@ -7,13 +7,13 @@ require('packer').startup(function(use)
                 run = 'yarn install --frozen-lockfile',
         })
 
-        use({
+        use {
                 'phaazon/hop.nvim',
-                branch = 'v1',
+                branch = 'v2',
                 config = function()
                         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
                 end
-        })
+        }
 
         use('tpope/vim-surround')
 
