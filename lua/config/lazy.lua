@@ -27,3 +27,4 @@ checker = { enabled = true, notify = false },
 })
 
 vim.cmd("colorscheme habamax")
+      require'lspconfig'.pyright.setup{}
