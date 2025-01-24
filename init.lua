@@ -105,8 +105,6 @@ vim.o.mouse = 'a'
 
 vim.o.background = 'dark'
 
-vim.o.ff = 'unix'
-
 vim.g.history = 1000
 
 vim.bo.matchpairs = "(:),{:},[:],<:>,':'"
@@ -156,6 +154,9 @@ vim.keymap.set('n', '<Esc>', ':noh<CR>')
 -- Get out of the Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
+-- Tree
+vim.keymap.set('n', '<C-n>', ':NvimTreeOpen<CR>')
+
 -- Resize with arrows
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>')
 vim.keymap.set('n', '<C-Down>', ':resize +2<CR>')
@@ -186,3 +187,5 @@ vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
 
 nnoremap <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :w<CR> :endif<CR>:bnext<CR>
 ]])
+
+require("config.lazy")
