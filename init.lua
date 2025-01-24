@@ -148,15 +148,6 @@ vim.o.pumheight = 10
 vim.g.material_style = 'palenight'
 vim.cmd('colorscheme material')
 
-
-local expressive_mapper = function(mode, key, result)
-        vim.api.nvim_set_keymap(mode, key, result, { silent = true, expr = true })
-end
-
-local plug_mapper = function(mode, key, result)
-        vim.api.nvim_set_keymap(mode, key, result, {})
-end
-
 -- Define Mapleader
 vim.g.mapleader = ' '
 
@@ -188,37 +179,6 @@ vim.keymap.set('v', '<Leader>P', '"+P"`"`"')
 
 vim.keymap.set('n', 'J', 'mzJ`z')
 
--- Plugins Mappings ↓
-
-vim.keymap.set('n', '<C-F>', ':Telescope live_grep<CR>')
-vim.keymap.set('n', '<C-P>', ':Telescope find_files<CR>')
-
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
-
-vim.keymap.set('n', '<Leader>o', ':HopWord<CR>')
-
-vim.keymap.set('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
-
-vim.keymap.set('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
-vim.keymap.set('n', '<F3>', ':call CocAction("format")<CR>')
-
-plug_mapper('n', '<leader>rn', '<Plug>(coc-rename)')
-
-plug_mapper('n', 'gd', '<Plug>(coc-definition)')
-plug_mapper('n', 'gr', '<Plug>(coc-references)')
-
-plug_mapper('n', '<leader>ca', '<Plug>(coc-codeaction)')
-plug_mapper('n', '<leader>ga', '<Plug>(coc-codeaction-cursor)')
-plug_mapper('x', '<leader>ga', '<Plug>(coc-codeaction-selected)')
-plug_mapper('n', '<leader>kf', '<Plug>(coc-fix-current)')
-
-plug_mapper('n', '<Right>', '<Plug>(coc-diagnostic-prev)')
-plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
-
-expressive_mapper('i', '<C-space>', 'coc#refresh()')
-
-vim.keymap.set("n","<leader>rp",":make<CR>")
-
 vim.cmd([[
 filetype plugin indent on
 
@@ -228,5 +188,5 @@ nnoremap <silent> <M-Down>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)
 vnoremap <silent> <M-Up>    :<C-U>exec "'<,'>move '<-" . (1+v:count1)<CR>gv
 vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
 
-nnoremap <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :w<CR> :endif<CR>:bnext<CR>
 ]])
