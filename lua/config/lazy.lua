@@ -22,9 +22,17 @@ require("lazy").setup({
     { import = "plugins" },
   },
 
-  install = { colorscheme = { "habamax" } },
+  install = { colorscheme = { "habamax" }, {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+} },
 checker = { enabled = true, notify = false },
 })
 
 vim.cmd("colorscheme habamax")
       require'lspconfig'.pyright.setup{}
+      require'lspconfig'.intelephense.setup{}
+      require'lspconfig'.ts_ls.setup{}

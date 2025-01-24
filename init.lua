@@ -279,3 +279,16 @@ require'nvim-treesitter.configs'.setup {
   require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     capabilities = capabilities
   }
+
+
+  -- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
+
+require("mason").setup()
+require("mason-lspconfig").setup()
+
