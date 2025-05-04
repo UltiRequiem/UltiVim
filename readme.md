@@ -1,3 +1,1 @@
 # UltiVim
-
-Hello World!
