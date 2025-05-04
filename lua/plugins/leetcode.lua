@@ -1,9 +1,9 @@
 local leet_arg = "leetcode.nvim"
 
 local opts = {
-	lang = "golang",
+	lang = "cpp",
 	storage = {
-		home = vim.fn.expand("$HOME") .. "/git/dotfiles/leetcode",
+		home = vim.fn.expand("$HOME") .. "/Documents/leetcode",
 		cache = vim.fn.stdpath("cache") .. "/leetcode",
 	},
 	arg = leet_arg,
