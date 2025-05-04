@@ -27,17 +27,21 @@ local config = function()
 		enabled = function()
 			return require("util.cmp").is_enabled()
 		end,
+
 		preselect = cmp.PreselectMode.Item,
 		keyword_length = 2,
+
 		snippet = {
 			expand = function(args)
 				require("luasnip").lsp_expand(args.body)
 			end,
 		},
+
 		window = {
 			completion = cmp.config.window.bordered(),
 			documentation = cmp.config.window.bordered(),
 		},
+
 		view = {
 			entries = {
 				name = "custom",
@@ -45,6 +49,8 @@ local config = function()
 				follow_cursor = true,
 			},
 		},
+		view = { docs = { auto_open = true } },
+
 		mapping = {
 			["<C-y>"] = cmp.mapping(
 				cmp.mapping.confirm({
@@ -62,6 +68,15 @@ local config = function()
 			["<C-b>"] = cmp.mapping.scroll_docs(-5),
 			["<C-f>"] = cmp.mapping.scroll_docs(5),
 			["<C-q>"] = cmp.mapping.abort(),
+			["K"] = cmp.mapping(function(fallback)
+				if cmp.visible_docs() then
+					cmp.close_docs()
+				elseif cmp.visible() then
+					cmp.open_docs()
+				else
+					fallback()
+				end
+			end),
 		},
 		sources = cmp.config.sources({
 			{
@@ -73,6 +88,7 @@ local config = function()
 					return not context.in_treesitter_capture("string") and not context.in_syntax_group("String")
 				end,
 			},
+			{ name = "nvim_lsp_signature_help" },
 			{
 				name = "nvim_lsp",
 				group_index = 2,
