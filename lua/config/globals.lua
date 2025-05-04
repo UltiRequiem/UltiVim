@@ -12,18 +12,18 @@ g.netrw_winsize = 25
 
 local x_display = os.getenv("DISPLAY")
 if x_display ~= nil and x_display ~= "" then
-  g.clipboard = { -- install xclip
-    name = "xclip",
-    copy = {
-      ["+"] = "xclip -f -sel clip",
-      ["*"] = "xclip -f -sel clip",
-    },
-    paste = {
-      ["+"] = "xclip -o -sel clip",
-      ["*"] = "xclip -o -sel clip",
-    },
-    cache_enabled = 1,
-  }
+	g.clipboard = { -- install xclip
+		name = "xclip",
+		copy = {
+			["+"] = "xclip -f -sel clip",
+			["*"] = "xclip -f -sel clip",
+		},
+		paste = {
+			["+"] = "xclip -o -sel clip",
+			["*"] = "xclip -o -sel clip",
+		},
+		cache_enabled = 1,
+	}
 end
 
 ---@diagnostic disable-next-line: duplicate-set-field

@@ -6,17 +6,17 @@ local m = u.lazy_map
 --  Prompt for branches
 
 return {
-  "sindrets/diffview.nvim",
-  init = function()
-    c("DiffviewMain", require("util.diffview").main)
-    c("DiffviewPrompt", require("util.diffview").prompt)
-  end,
-  config = true,
-  cmd = { "DiffviewOpen" },
-  keys = {
-    m("<leader>do", [[DiffviewOpen]]),
-    m("<leader>dq", [[DiffviewClose]]),
-    m("<leader>dm", [[DiffviewMain]]),
-    m("<leader>dp", [[DiffviewPrompt]]),
-  },
+	"sindrets/diffview.nvim",
+	init = function()
+		c("DiffviewMain", require("util.diffview").main)
+		c("DiffviewPrompt", require("util.diffview").prompt)
+	end,
+	config = true,
+	cmd = { "DiffviewOpen" },
+	keys = {
+		m("<leader>do", [[DiffviewOpen]]),
+		m("<leader>dq", [[DiffviewClose]]),
+		m("<leader>dm", [[DiffviewMain]]),
+		m("<leader>dp", [[DiffviewPrompt]]),
+	},
 }
