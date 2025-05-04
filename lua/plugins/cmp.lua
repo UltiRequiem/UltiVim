@@ -14,7 +14,9 @@ local config = function()
 	local lspkind = require("lspkind")
 	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 	local cmp_tailwind = require("cmp-tailwind-colors")
+	local luasnip = require("luasnip")
 	local autocomplete_group = vim.api.nvim_create_augroup("dadbod-autocomplete", { clear = true })
+
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = { "sql", "mysql", "plsql" },
 		callback = function()
@@ -42,13 +44,6 @@ local config = function()
 			documentation = cmp.config.window.bordered(),
 		},
 
-		view = {
-			entries = {
-				name = "custom",
-				selection_order = "near_cursor",
-				follow_cursor = true,
-			},
-		},
 		view = { docs = { auto_open = true } },
 
 		mapping = {
@@ -68,6 +63,22 @@ local config = function()
 			["<C-b>"] = cmp.mapping.scroll_docs(-5),
 			["<C-f>"] = cmp.mapping.scroll_docs(5),
 			["<C-q>"] = cmp.mapping.abort(),
+			["<Tab>"] = cmp.mapping(function(fallback)
+				if require("copilot.suggestion").is_visible() then
+					require("copilot.suggestion").accept()
+				elseif cmp.visible() then
+					cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+				elseif luasnip.expandable() then
+					luasnip.expand()
+				elseif has_words_before() then
+					cmp.complete()
+				else
+					fallback()
+				end
+			end, {
+				"i",
+				"s",
+			}),
 			["K"] = cmp.mapping(function(fallback)
 				if cmp.visible_docs() then
 					cmp.close_docs()
@@ -78,6 +89,7 @@ local config = function()
 				end
 			end),
 		},
+
 		sources = cmp.config.sources({
 			{
 				name = "luasnip",
@@ -89,6 +101,7 @@ local config = function()
 				end,
 			},
 			{ name = "nvim_lsp_signature_help" },
+			{ name = "copilot" },
 			{
 				name = "nvim_lsp",
 				group_index = 2,
@@ -127,7 +140,7 @@ local config = function()
 				group_index = 0,
 			},
 		}),
-		---@diagnostic disable-next-line: missing-fields
+
 		formatting = {
 			format = lspkind.cmp_format({
 				mode = "symbol_text",
@@ -139,6 +152,7 @@ local config = function()
 				menu = source_mapping,
 			}),
 		},
+
 		sorting = {
 			priority_weight = 2,
 			comparators = {
@@ -153,6 +167,7 @@ local config = function()
 			},
 		},
 	})
+
 	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 end
 
@@ -169,7 +184,6 @@ return {
 			"hrsh7th/cmp-nvim-lua",
 			"ray-x/cmp-treesitter",
 			"saadparwaiz1/cmp_luasnip",
-			-- "roobert/tailwindcss-colorizer-cmp.nvim",
 			"js-everts/cmp-tailwind-colors",
 		},
 	},

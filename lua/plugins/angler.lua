@@ -1,10 +1,8 @@
-local dev = false
 local e = vim.tbl_extend
 local m = require("util").lazy_map
 local project = require("util.project")
 
 local opts = {
-	-- log_level = "debug",
 	log_level = "trace",
 }
 
@@ -20,6 +18,7 @@ local keys = {
 	m("gn", angler_str .. [[.open_cwd({order = "next"})]]),
 	m("gp", angler_str .. [[.open_cwd({order = "prev"})]]),
 }
+
 keys = project.get_keys("angler", keys)
 
 local plugin = {
@@ -31,13 +30,6 @@ local plugin = {
 	},
 }
 
-if dev == true then
-	return e("keep", plugin, {
-		dir = "~/git/angler.nvim",
-		lazy = false,
-	})
-else
-	return e("keep", plugin, {
-		"catgoose/angler.nvim",
-	})
-end
+return e("keep", plugin, {
+	"catgoose/angler.nvim",
+})
