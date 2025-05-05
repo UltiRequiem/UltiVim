@@ -6,27 +6,27 @@ local capabilities = vim.tbl_deep_extend(
 	vim.lsp.protocol.make_client_capabilities(),
 	require("cmp_nvim_lsp").default_capabilities()
 )
+
 -- ufo
 capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true,
 }
+
 ---@diagnostic disable-next-line: inject-field
 capabilities.offsetEncoding = { "utf-16" }
+
 -- snippets
 local _snippet_capabilities = vim.lsp.protocol.make_client_capabilities()
+
 ---@diagnostic disable-next-line: inject-field
 _snippet_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local snippet_capabilities = vim.tbl_extend("keep", capabilities, _snippet_capabilities)
 -- Diagnostic
+
 vim.diagnostic.config({
-	virtual_text = false,
-	-- virtual_lines = {
-	--   only_current_line = true,
-	-- },
-	-- https://github.com/neovim/neovim/pull/31959
-	-- https://github.com/neovim/neovim/pull/32187
+	virtual_text = true,
 	virtual_lines = {
 		current_line = true,
 	},
@@ -48,9 +48,13 @@ function M.init(lspconfig)
 	end
 
 	local ts_ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
+
 	local vue_ft = { unpack(ts_ft) }
+
 	table.insert(vue_ft, "vue")
+
 	local css_ft = { "css", "scss", "less", "sass", "vue" }
+
 	local tsdk = function()
 		return vim.fn.getcwd() .. "/node_modules/typescript/lib"
 	end
@@ -106,9 +110,6 @@ function M.init(lspconfig)
 			capabilities = snippet_capabilities,
 			filetypes = { "html", "vue", "templ" },
 		},
-		-- htmx = {
-		--   filetypes = { "html", "templ" },
-		-- },
 		cssmodules_ls = {
 			filetypes = vue_ft,
 		},
@@ -133,18 +134,6 @@ function M.init(lspconfig)
 		},
 		jsonls = {
 			capabilities = snippet_capabilities,
-			-- settings = {
-			--   json = {
-			--     schemas = require("schemastore").json.schemas({
-			--       select = {
-			--         "package.json",
-			--         ".eslintrc",
-			--         "tsconfig.json",
-			--       },
-			--     }),
-			--     validate = { enable = true },
-			--   },
-			-- },
 		},
 		vimls = {
 			diagnostic = { enable = true },
@@ -181,6 +170,7 @@ function M.init(lspconfig)
 			},
 		},
 		angularls = {},
+		rust_analyzer = {},
 		gopls = {
 			settings = {
 				gopls = {
