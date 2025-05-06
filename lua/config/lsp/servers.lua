@@ -67,6 +67,7 @@ function M.init(lspconfig)
 		language_servers = {
 			"awk_ls",
 			"bashls",
+			"prisma_language_server",
 			"docker_compose_language_service",
 			"dockerls",
 			"golangci_lint_ls",
@@ -233,27 +234,6 @@ function M.init(lspconfig)
 			lspconfig[srv].setup(cfg)
 		end
 	end
-
-	-- lspconfig.diagnosticls.setup({
-	--   capabilities = capabilities,
-	--   on_attach = function(client, bufnr)
-	--     local stop_ft = {
-	--       "dap-repl",
-	--     }
-	--     for _, ft in pairs(stop_ft) do
-	--       if vim.bo.filetype == ft then
-	--         if vim.lsp.buf_is_attached(bufnr, client.id) then
-	--           local notify = vim.notify
-	--           ---@diagnostic disable-next-line: duplicate-set-field
-	--           vim.notify = function() end
-	--           vim.lsp.buf_detach_client(bufnr, client.id)
-	--           vim.notify = notify
-	--         end
-	--       end
-	--     end
-	--     on_attach(client, bufnr)
-	--   end,
-	-- })
 end
 
 return M

@@ -2,6 +2,7 @@ local config = function()
 	local opts = {
 		ensure_installed = {
 			"angular",
+			"prisma",
 			"awk",
 			"bash",
 			"c",

@@ -3,6 +3,7 @@ return {
 	event = "BufReadPre",
 	config = function()
 		local lint = require("lint")
+
 		lint.linters_by_ft = {
 			javascript = { "eslint_d", "oxlint" },
 			typescript = { "eslint_d", "oxlint" },
