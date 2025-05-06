@@ -18,6 +18,7 @@ local opts = {
 		"jsonls",
 		"lua_ls",
 		"marksman",
+		"prismals",
 		"powershell_es",
 		"sqlls",
 		"tailwindcss",

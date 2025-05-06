@@ -67,7 +67,6 @@ function M.init(lspconfig)
 		language_servers = {
 			"awk_ls",
 			"bashls",
-			"prisma_language_server",
 			"docker_compose_language_service",
 			"dockerls",
 			"golangci_lint_ls",
@@ -170,6 +169,7 @@ function M.init(lspconfig)
 				},
 			},
 		},
+		clangd = {},
 		angularls = {},
 		rust_analyzer = {},
 		gopls = {
