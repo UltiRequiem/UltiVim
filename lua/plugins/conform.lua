@@ -1,6 +1,8 @@
 local m = require("util").lazy_map
 local c = require("util").create_cmd
 
+-- local using_eslint = require("neoconf").get("servers.eslint.enable")
+
 local opts = {
 	formatters_by_ft = {
 		css = { "prettierd" },
@@ -11,7 +13,7 @@ local opts = {
 		jsonc = { "prettierd" },
 		lua = { "stylua" },
 		scss = { "prettierd" },
-		typescript = { "prettierd" },
+		typescript = { "biome" },
 		vue = { "prettierd" },
 		fish = { "fish_indent" },
 		sh = { "shfmt", "shellharden" },
