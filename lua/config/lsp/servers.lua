@@ -113,6 +113,9 @@ function M.init(lspconfig)
 		cssmodules_ls = {
 			filetypes = vue_ft,
 		},
+		biome_ls = {
+			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+		},
 		ts_ls = {
 			filetypes = ts_ft,
 			init_options = {

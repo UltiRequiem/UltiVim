@@ -4,9 +4,11 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		local using_eslint = require("neoconf").get("servers.eslint.enable")
+
 		lint.linters_by_ft = {
-			javascript = { "eslint_d", "oxlint" },
-			typescript = { "eslint_d", "oxlint" },
+			javascript = using_eslint and { "eslint_d", "oxlint" } or {},
+			typescript = using_eslint and { "eslint_d", "oxlint" } or {},
 			vue = { "eslint_d", "oxlint" },
 			docker = { "hadolint" },
 			fish = { "fish" },
