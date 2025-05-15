@@ -7,5 +7,11 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	lazy = false,
-	opts = {},
+	opts = {
+		filesystem = {
+			filtered_items = {
+				visible = true,
+			},
+		},
+	},
 }
