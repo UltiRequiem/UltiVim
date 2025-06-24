@@ -50,7 +50,6 @@ return {
 					end
 				end
 				lint.try_lint()
-				lint.try_lint({ "codespell" })
 			end,
 		})
 	end,

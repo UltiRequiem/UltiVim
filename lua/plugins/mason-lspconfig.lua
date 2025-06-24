@@ -22,7 +22,6 @@ local opts = {
 		"powershell_es",
 		"sqlls",
 		"tailwindcss",
-		"volar",
 		"yamlls",
 	},
 	automatic_installation = true,
