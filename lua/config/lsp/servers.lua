@@ -7,12 +7,6 @@ local capabilities = vim.tbl_deep_extend(
 	require("cmp_nvim_lsp").default_capabilities()
 )
 
--- ufo
-capabilities.textDocument.foldingRange = {
-	dynamicRegistration = false,
-	lineFoldingOnly = true,
-}
-
 ---@diagnostic disable-next-line: inject-field
 capabilities.offsetEncoding = { "utf-16" }
 
@@ -113,9 +107,7 @@ function M.init(lspconfig)
 		cssmodules_ls = {
 			filetypes = vue_ft,
 		},
-		biome_ls = {
-			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-		},
+
 		ts_ls = {
 			filetypes = ts_ft,
 			init_options = {

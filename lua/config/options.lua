@@ -109,3 +109,9 @@ opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Sessions
 opt.sessionoptions = "buffers,curdir,folds,help,winsize,winpos,tabpages,localoptions"
+
+-- Disable folding completely
+opt.foldenable = false
+opt.foldmethod = "manual"
+opt.foldlevel = 99
+opt.foldlevelstart = 99
