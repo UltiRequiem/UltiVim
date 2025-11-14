@@ -28,7 +28,8 @@ jobs:
 
     - name: Install stylua
       run: |
-        wget -qO- https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip | gunzip > stylua
+        curl -L -o stylua.zip https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip
+        unzip stylua.zip
         chmod +x stylua
         sudo mv stylua /usr/local/bin/
 
@@ -48,10 +49,12 @@ jobs:
 
     - name: Install Neovim
       run: |
-        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-        sudo rm -rf /opt/nvim
-        sudo tar -C /opt -xzf nvim-linux64.tar.gz
-        sudo ln -sf /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+        # Install Neovim via package manager for reliability
+        sudo apt-get update
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository ppa:neovim-ppa/unstable -y
+        sudo apt-get update
+        sudo apt-get install -y neovim
 
     - name: Test configuration loading
       run: |
@@ -80,8 +83,8 @@ jobs:
         ! grep -r -i "api_key\s*=" --include="*.lua" lua/ || (echo "API key assignments found" && exit 1)
         ! grep -r -i "auth_token\s*=" --include="*.lua" lua/ || (echo "Auth token assignments found" && exit 1)
 
-        # Check for suspicious URLs
-        ! grep -r "http://" --include="*.lua" lua/ || (echo "Insecure HTTP URLs found" && exit 1)
+        # Check for suspicious URLs (excluding localhost)
+        ! grep -r "http://" --include="*.lua" lua/ | grep -v "localhost\|127\.0\.0\.1" || (echo "Insecure HTTP URLs found" && exit 1)
 
   performance:
     name: Performance Check
