@@ -38,5 +38,3 @@ files["lua/config/**/*.lua"] = {
 }
 
 -- Allow unused variables starting with underscore
-unused_args = false
-unused = false
