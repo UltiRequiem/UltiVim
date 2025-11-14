@@ -30,4 +30,6 @@ vnoremap <silent> <M-Down>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<CR>gv
 nnoremap <silent> <tab>  :if &modifiable && !&readonly && &modified <CR> :w<CR> :endif<CR>:bnext<CR>
 ]])
 
-vim.keymap.set("n", "<space>n", ":Neotree toggle<CR>")
+vim.keymap.set("n", "<space>n", function()
+	require("neo-tree.command").execute({ toggle = true })
+end, { desc = "Toggle NeoTree" })

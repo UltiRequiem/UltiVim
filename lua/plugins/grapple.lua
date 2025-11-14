@@ -20,11 +20,11 @@ local opts = {
 	},
 }
 
-local function switch(_scope, dirx)
+local function switch(target_scope, dirx)
 	return function()
-		vim.cmd(("silent! Grapple use_scope %s"):format(_scope or "git_branch"))
+		vim.cmd(("silent! Grapple use_scope %s"):format(target_scope or "git_branch"))
 		vim.cmd(("silent! Grapple cycle_tags %s"):format(dirx or "next"))
-		vim.g.catgoose_grapple_scope = _scope
+		vim.g.catgoose_grapple_scope = target_scope
 	end
 end
 
