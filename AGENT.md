@@ -1,12 +1,14 @@
 # UltiVim Agent Configuration
 
-This file contains automated agent instructions for maintaining code quality, refactoring, and setup management of the UltiVim Neovim configuration.
+This file contains automated agent instructions for maintaining code quality,
+refactoring, and setup management of the UltiVim Neovim configuration.
 
 ## 🤖 Agent Instructions
 
 ### Code Quality & Refactoring
 
 #### Lua Code Standards
+
 - **Indentation**: Maintain consistent tab indentation
 - **Naming**: Use snake_case for variables and functions
 - **Performance**: Optimize lazy loading and startup times
@@ -15,6 +17,7 @@ This file contains automated agent instructions for maintaining code quality, re
 - **Comments**: Remove unnecessary comments, keep only essential documentation
 
 #### Plugin Management
+
 - **Lazy Loading**: Ensure all plugins use appropriate events/conditions
 - **Dependencies**: Explicitly declare and minimize dependencies
 - **Conflicts**: Detect and resolve plugin conflicts automatically
@@ -22,6 +25,7 @@ This file contains automated agent instructions for maintaining code quality, re
 - **Updates**: Keep plugins updated to latest stable versions
 
 #### LSP Configuration
+
 - **Server Management**: Optimize language server configurations
 - **Capabilities**: Ensure proper capability declarations
 - **Performance**: Minimize LSP overhead and startup impact
@@ -31,6 +35,7 @@ This file contains automated agent instructions for maintaining code quality, re
 ### Setup & Installation
 
 #### Prerequisites Check
+
 ```bash
 # Verify Neovim version >= 0.9.0
 nvim --version
@@ -46,6 +51,7 @@ git --version
 ```
 
 #### Automated Setup Tasks
+
 1. **Plugin Installation**: Auto-sync all plugins via Lazy.nvim
 2. **LSP Servers**: Install required language servers via Mason
 3. **Formatters**: Install formatters and linters via Mason
@@ -53,6 +59,7 @@ git --version
 5. **Performance Test**: Verify startup time benchmarks
 
 #### Configuration Validation
+
 - **Syntax Check**: Validate all Lua configuration files
 - **Key Conflicts**: Detect conflicting key mappings
 - **Plugin Conflicts**: Identify incompatible plugin combinations
@@ -62,18 +69,21 @@ git --version
 ### Maintenance Tasks
 
 #### Daily Maintenance
+
 - Update plugin specifications
 - Check for deprecated APIs
 - Validate configuration integrity
 - Monitor startup performance
 
 #### Weekly Maintenance
+
 - Review and optimize plugin loading
 - Update language server configurations
 - Clean unused dependencies
 - Performance profiling and optimization
 
 #### Monthly Maintenance
+
 - Major plugin updates evaluation
 - Configuration architecture review
 - Performance baseline updates
@@ -82,6 +92,7 @@ git --version
 ### Quality Assurance
 
 #### Code Review Checklist
+
 - [ ] All plugins properly lazy-loaded
 - [ ] No hardcoded paths or configurations
 - [ ] Proper error handling implemented
@@ -92,6 +103,7 @@ git --version
 - [ ] Documentation updated if needed
 
 #### Performance Benchmarks
+
 - **Startup Time**: < 100ms
 - **Memory Usage**: < 50MB initial
 - **Plugin Load Time**: < 10ms per plugin
@@ -99,6 +111,7 @@ git --version
 - **File Open Time**: < 50ms
 
 #### Testing Matrix
+
 ```lua
 -- Test different environments
 local test_environments = {
@@ -117,18 +130,21 @@ local test_filetypes = {
 ### Refactoring Guidelines
 
 #### Plugin Configurations
+
 1. **Consolidation**: Merge related plugin configs
 2. **Separation**: Split large configs into focused modules
 3. **Standardization**: Use consistent configuration patterns
 4. **Optimization**: Remove redundant settings and dependencies
 
 #### Key Mapping Refactoring
+
 1. **Grouping**: Organize by functional categories
 2. **Consistency**: Standardize naming patterns
 3. **Conflicts**: Resolve overlapping mappings
 4. **Documentation**: Maintain up-to-date mapping tables
 
 #### LSP Refactoring
+
 1. **Server Optimization**: Remove unused server configurations
 2. **Handler Efficiency**: Optimize diagnostic and completion handlers
 3. **Capability Management**: Streamline client capabilities
@@ -137,6 +153,7 @@ local test_filetypes = {
 ### Automation Scripts
 
 #### Setup Validation
+
 ```lua
 -- Validate configuration integrity
 local function validate_config()
@@ -165,6 +182,7 @@ end
 ```
 
 #### Plugin Cleanup
+
 ```lua
 -- Remove unused plugins and clean cache
 local function cleanup_plugins()
@@ -185,6 +203,7 @@ end
 ```
 
 #### Performance Monitoring
+
 ```lua
 -- Monitor and report performance metrics
 local function performance_report()
@@ -208,6 +227,7 @@ end
 ### Agent Behavior Configuration
 
 #### Automated Actions
+
 - **Fix**: Automatically fix common configuration issues
 - **Warn**: Alert about potential problems without fixing
 - **Report**: Generate reports on configuration health
@@ -215,6 +235,7 @@ end
 - **Optimize**: Continuously improve performance
 
 #### Manual Review Required
+
 - Breaking plugin changes
 - Major architectural changes
 - New language server additions
@@ -222,6 +243,7 @@ end
 - Security-related configurations
 
 #### Escalation Triggers
+
 - Startup time > 200ms
 - Memory usage > 100MB
 - Plugin conflicts detected
@@ -230,6 +252,5 @@ end
 
 ---
 
-**Agent Status**: Active monitoring and maintenance enabled
-**Last Updated**: 2024-11-14
-**Version**: 1.0.0
+**Agent Status**: Active monitoring and maintenance enabled **Last Updated**:
+2024-11-14 **Version**: 1.0.0
