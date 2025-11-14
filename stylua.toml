@@ -1,0 +1,26 @@
+# StyLua configuration for Neovim config
+
+# Use tabs for indentation (consistent with your existing style)
+indent_type = "Tabs"
+indent_width = 1
+
+# Line length
+column_width = 120
+
+# Quote style
+quote_style = "AutoPreferDouble"
+
+# Function call style
+call_parentheses = "Always"
+
+# Collapse simple statements
+collapse_simple_statement = "Never"
+
+# Sort requires
+sort_requires = {
+  enabled = false
+}
+
+# Ignore patterns
+[sort_requires.config]
+# Don't sort require statements as order might matter

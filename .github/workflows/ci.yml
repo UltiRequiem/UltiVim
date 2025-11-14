@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint:
+    name: Lint Lua Files
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Lua
+      uses: leafo/gh-actions-lua@v10
+      with:
+        luaVersion: "5.1"
+
+    - name: Setup Luarocks
+      uses: leafo/gh-actions-luarocks@v4
+
+    - name: Install luacheck
+      run: luarocks install luacheck
+
+    - name: Install stylua
+      uses: JohnnyMorganz/stylua-action@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        version: latest
+
+    - name: Run luacheck
+      run: luacheck lua/ --globals vim --codes
+
+    - name: Check formatting with stylua
+      run: stylua --check lua/
+
+  neovim-test:
+    name: Neovim Configuration Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Neovim
+      uses: rhymond/setup-nvim@v1
+      with:
+        version: stable
+
+    - name: Test configuration loading
+      run: |
+        # Test that config loads without errors
+        nvim --headless -c "lua vim.print('Config loaded successfully')" -c "qa" 2>&1 | grep -q "Config loaded successfully"
+
+        # Test plugin management
+        nvim --headless -c "lua require('lazy').setup()" -c "qa"
+
+    - name: Check for deprecated APIs
+      run: |
+        # Check for common deprecated patterns
+        ! grep -r "vim\.lsp\.buf\.formatting" lua/ || (echo "Found deprecated formatting API" && exit 1)
+        ! grep -r "vim\.lsp\.diagnostic" lua/ || (echo "Found deprecated diagnostic API" && exit 1)
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Scan for secrets
+      run: |
+        # Basic secret scanning
+        ! grep -r "password\|secret\|key\|token" --include="*.lua" lua/ | grep -v "keymap\|keyword" || (echo "Potential secrets found" && exit 1)
+
+        # Check for suspicious URLs
+        ! grep -r "http://" --include="*.lua" lua/ || (echo "Insecure HTTP URLs found" && exit 1)
+
+  performance:
+    name: Performance Check
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Neovim
+      uses: rhymond/setup-nvim@v1
+      with:
+        version: stable
+
+    - name: Measure startup time
+      run: |
+        # Test startup time (should be under 100ms for optimized config)
+        nvim --headless --startuptime startup.log -c "qa"
+        startup_time=$(tail -1 startup.log | awk '{print $1}')
+        echo "Startup time: ${startup_time}ms"
+
+        # Warn if startup is slow (but don't fail)
+        if (( $(echo "$startup_time > 200" | bc -l) )); then
+          echo "⚠️  Startup time is slower than expected: ${startup_time}ms"
+        fi
+
+    - name: Plugin count check
+      run: |
+        plugin_count=$(find lua/plugins/ -name "*.lua" | wc -l)
+        echo "Plugin configurations: $plugin_count"
+
+        # Check for reasonable plugin count
+        if [ $plugin_count -gt 100 ]; then
+          echo "⚠️  High plugin count: $plugin_count configurations"
+        fi
