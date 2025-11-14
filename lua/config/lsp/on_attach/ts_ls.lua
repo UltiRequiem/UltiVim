@@ -29,7 +29,7 @@ end
 local function get_client(bufnr)
 	bufnr = bufnr or vim.api.nvim_get_current_buf()
 	local clients = vim.lsp.get_clients({ name = "ts_ls", bufnr = bufnr })
-	if not #clients == 1 then
+	if #clients ~= 1 then
 		return
 	end
 	return clients[1]

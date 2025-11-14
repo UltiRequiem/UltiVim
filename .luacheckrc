@@ -8,12 +8,16 @@ globals = {
   "it",       -- For tests
   "before_each", -- For tests
   "after_each",  -- For tests
+  "P",        -- Global print function
+  "RELOAD",   -- Global reload function
+  "R",        -- Global require reload function
 }
 
 -- Ignore some common patterns
 ignore = {
   "212", -- Unused argument
   "213", -- Unused loop variable
+  "512", -- Loop is executed at most once (intentional early returns)
   "631", -- Line is too long (we'll use stylua for formatting)
 }
 

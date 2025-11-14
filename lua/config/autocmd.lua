@@ -86,7 +86,7 @@ autocmd({ "BufEnter" }, {
 	pattern = { "*" },
 	callback = function(event)
 		if bo.buftype == "" and bo.filetype == "" then
-			-- q_to_quit(event)
+			u.map_q_to_quit(event)
 		end
 	end,
 })

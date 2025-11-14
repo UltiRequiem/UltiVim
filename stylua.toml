@@ -16,11 +16,6 @@ call_parentheses = "Always"
 # Collapse simple statements
 collapse_simple_statement = "Never"
 
-# Sort requires
-sort_requires = {
-  enabled = false
-}
-
-# Ignore patterns
-[sort_requires.config]
-# Don't sort require statements as order might matter
+# Sort requires (disabled as order might matter)
+[sort_requires]
+enabled = false

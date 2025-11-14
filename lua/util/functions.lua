@@ -246,7 +246,7 @@ function M.testing_function()
 		local cursor_row = vim.api.nvim_win_get_cursor(0)[1]
 		local query_string = [[
     (method_declaration
-      receiver: (parameter_list 
+      receiver: (parameter_list
         (parameter_declaration) @receiver_param)
       name: (field_identifier) @method_name)
   ]]
