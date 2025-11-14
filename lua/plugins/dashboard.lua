@@ -30,61 +30,61 @@ local opts = {
 		header = header,
 		center = {
 			{
-				icon = "",
+				icon = "",
 				desc = "Lazy sync / TSUpdate / MasonToolsUpdate",
 				key = "s",
 				action = "UpdateAndSyncAll",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "One step for vimkind",
 				key = "l",
 				action = "OneStepForVimKindLaunch",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Mason",
 				key = "m",
 				action = "Mason",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Find files",
 				key = "f",
 				action = "Telescope find_files",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "DiffView main/master",
 				key = "d",
 				action = "DiffviewMain",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "DiffView prompt",
 				key = "D",
 				action = "DiffviewPrompt",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Restore session",
 				key = "r",
 				action = "PersistenceLoad",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Select session",
 				key = "R",
 				action = "PersistenceSelect",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Empty buffer",
 				key = "e",
 				action = "enew",
 			},
 			{
-				icon = "",
+				icon = "",
 				desc = "Quit",
 				key = "q",
 				action = "q",
@@ -92,7 +92,6 @@ local opts = {
 		},
 		footer = function()
 			local phrase = { "One last requiem.", "", "Zero" }
-
 			return phrase
 		end,
 	},

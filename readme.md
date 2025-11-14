@@ -248,8 +248,8 @@ nvim
 ## 🎨 Themes & UI
 
 - **Default Theme**: Kanagawa (elegant, readable)
-- **Status Line**: Custom Heirline configuration
-- **File Tree**: NeoTree with modern icons
+- **Status Line**: Lualine with clean design
+- **File Manager**: NeoTree sidebar + Oil floating manager
 - **Completion**: nvim-cmp with multiple sources
 - **Syntax**: TreeSitter with advanced highlighting
 
@@ -273,9 +273,9 @@ nvim
 
 ## 🚀 Performance
 
-- **Startup Time**: ~50-80ms (with 70+ plugins)
-- **Memory Usage**: Optimized lazy loading
-- **Disabled Plugins**: Removed unnecessary built-ins
+- **Startup Time**: ~30-50ms (with 60+ optimized plugins)
+- **Memory Usage**: Optimized lazy loading and minimal UI
+- **Cleaned Up**: Removed complex and redundant plugins
 - **Smart Loading**: Event-based plugin initialization
 
 ## 🛠️ Customization

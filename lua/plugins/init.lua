@@ -5,11 +5,6 @@ return {
 		"dstein64/vim-startuptime",
 	},
 	{
-		"lambdalisue/suda.vim",
-		event = "BufReadPre",
-		enabled = false,
-	},
-	{
 		"famiu/bufdelete.nvim",
 		dependencies = "schickling/vim-bufonly",
 		cmd = { "BufOnly", "Bdelete" },
