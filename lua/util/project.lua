@@ -130,7 +130,7 @@ local function get_project_property(project_name, property_type)
 	if not project then
 		return nil
 	end
-	local property = nil
+	local property
 	if project == current_project then
 		property = project["dev_" .. property_type] or {}
 	else

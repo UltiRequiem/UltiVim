@@ -26,18 +26,14 @@ jobs:
     - name: Install luacheck
       run: luarocks install luacheck
 
-    - name: Install stylua
-      run: |
-        curl -L -o stylua.zip https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip
-        unzip stylua.zip
-        chmod +x stylua
-        sudo mv stylua /usr/local/bin/
-
     - name: Run luacheck
       run: luacheck lua/ --globals vim --codes
 
-    - name: Check formatting with stylua
-      run: stylua --check lua/
+    - name: Run StyLua
+      uses: JohnnyMorganz/stylua-action@v3
+      with:
+        version: latest
+        args: --check lua/
 
   neovim-test:
     name: Neovim Configuration Test

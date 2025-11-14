@@ -15,7 +15,7 @@ function M.init()
 			}
 			require("ts-error-translator").translate_diagnostics(err, err_diag, ctx)
 		end
-		vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
+		vim.diagnostic.handlers.on_publish_diagnostics(err, result, ctx)
 	end
 
 	local inlay_hint_handler = vim.lsp.handlers[vim.lsp.protocol.Methods["textDocument_inlayHint"]]

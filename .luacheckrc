@@ -15,6 +15,7 @@ globals = {
 
 -- Ignore some common patterns
 ignore = {
+  "211", -- Unused variable (common in snippet utility files)
   "212", -- Unused argument
   "213", -- Unused loop variable
   "512", -- Loop is executed at most once (intentional early returns)
