@@ -29,7 +29,7 @@ function M.setup(dap, host)
 			})
 			vim.g.catgoose_terminal_enable_startinsert = 1
 			if jobid == 0 then
-				vim.notify("Failed to start terminal", vim.log.levels.ERROR)
+				vim.notify(("Failed to start terminal for command `%s`. Please check your terminal configuration and ensure that Neovim supports terminal jobs."):format(table.concat(cmd, " ")), vim.log.levels.ERROR)
 			elseif jobid == -1 then
 				vim.notify(("Cmd `%s` is not executable"):format(cmd[1]), vim.log.levels.ERROR)
 				return
