@@ -3,6 +3,9 @@ local M = {}
 function M.init()
 	require("config.lsp.handlers.hover").init()
 
+	-- Store the original handler to avoid recursion
+	local original_handler = vim.lsp.handlers["textDocument/publishDiagnostics"]
+
 	---@diagnostic disable-next-line: duplicate-set-field
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx)
 		local ts_lsp = { "ts_ls", "angularls", "volar" }
@@ -15,7 +18,7 @@ function M.init()
 			}
 			require("ts-error-translator").translate_diagnostics(err, err_diag, ctx)
 		end
-		vim.diagnostic.handlers.on_publish_diagnostics(err, result, ctx)
+		original_handler(err, result, ctx)
 	end
 
 	local inlay_hint_handler = vim.lsp.handlers[vim.lsp.protocol.Methods["textDocument_inlayHint"]]
