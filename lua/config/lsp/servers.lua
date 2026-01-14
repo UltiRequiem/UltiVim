@@ -165,7 +165,7 @@ function M.init(lspconfig)
 			},
 		},
 		clangd = {},
-		basedpyright = {},
+		ty = {},
 		angularls = {},
 		rust_analyzer = {},
 		gopls = {
