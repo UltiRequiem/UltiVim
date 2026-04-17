@@ -183,11 +183,9 @@ return {
 			"nvim-treesitter/nvim-treesitter-context",
 			{
 				"bennypowers/template-literal-comments.nvim",
-				opts = true,
-				ft = {
-					"javascript",
-					"typescript",
-				},
+				config = function()
+					pcall(require("template-literal-comments").setup, {})
+				end,
 			},
 			{
 				"LiadOz/nvim-dap-repl-highlights",

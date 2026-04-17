@@ -68,7 +68,7 @@ return {
 				default_section = "breakpoints",
 			},
 			windows = {
-				height = 12,
+				size = 12,
 				terminal = {
 					position = "right",
 					-- hide = { "go" },
