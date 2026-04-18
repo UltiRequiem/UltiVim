@@ -1,32 +1,30 @@
 local ls = require("luasnip")
 local fmt = require("luasnip.extras.fmt").fmt
-local ts_locals = require("nvim-treesitter.locals")
-local ts_utils = require("nvim-treesitter.ts_utils")
 
 local M = {}
 
+local func_types = {
+	function_declaration = true,
+	method_declaration = true,
+	func_literal = true,
+}
+
+local function find_enclosing_func(node)
+	local cur = node
+	while cur do
+		if func_types[cur:type()] then
+			return cur
+		end
+		cur = cur:parent()
+	end
+end
+
 function M.in_func()
-	-- local ok, ts_utils = pcall(require, "nvim-treesitter.ts_utils")
-	-- if not ok then
-	--   return false
-	-- end
-	local current_node = ts_utils.get_node_at_cursor()
-	if not current_node then
+	local node = vim.treesitter.get_node()
+	if not node then
 		return false
 	end
-	local expr = current_node
-
-	while expr do
-		if expr:type() == "function_declaration" or expr:type() == "method_declaration" then
-			return true
-		end
-		local parent = expr:parent()
-		if not parent then
-			return false
-		end
-		expr = parent
-	end
-	return false
+	return find_enclosing_func(node) ~= nil
 end
 
 function M.not_in_func()
@@ -169,25 +167,12 @@ local handlers = {
 
 local function return_value_nodes(info)
 	set_query()
-	local cursor_node = ts_utils.get_node_at_cursor()
+	local cursor_node = vim.treesitter.get_node()
 	if not cursor_node then
 		return
 	end
-	local scope_tree = ts_locals.get_scope_tree(cursor_node, 0)
 
-	local function_node
-	for _, scope in ipairs(scope_tree) do
-		if
-			scope:type() == "function_declaration"
-			or scope:type() == "method_declaration"
-			or scope:type() == "method_declaration"
-			or scope:type() == "func_literal"
-		then
-			function_node = scope
-			break
-		end
-	end
-
+	local function_node = find_enclosing_func(cursor_node)
 	if not function_node then
 		return
 	end

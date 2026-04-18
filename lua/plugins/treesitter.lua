@@ -28,7 +28,6 @@ local config = function()
 		"xml",
 		"jq",
 		"json",
-		"jsonc",
 		"lua",
 		"luap",
 		"make",

@@ -165,7 +165,6 @@ function M.init(lspconfig)
 			},
 		},
 		clangd = {},
-		ty = {},
 		angularls = {},
 		rust_analyzer = {},
 		gopls = {
