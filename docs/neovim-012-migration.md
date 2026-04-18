@@ -186,3 +186,30 @@ nvim-treesitter `main` branch requires the CLI to compile parsers.
 ```sh
 brew install tree-sitter-cli
 ```
+
+---
+
+## azure_pipelines_ls: UriError "Scheme is missing: path=null"
+
+The old lspconfig config (`lua/lspconfig/configs/azure_pipelines_ls.lua`) sets
+`single_file_support = true`. This causes the server to attach to any YAML file
+even when no `azure-pipelines.yml` parent is found, and Neovim sends
+`rootUri: null` in the initialize request. The Node.js server's `vscode-uri`
+library then fails with:
+
+```
+RPC[Error] InternalError: Request initialize failed: [UriError]: Scheme is missing:
+{scheme: "", authority: "", path: "null", ...}
+```
+
+Fix: override `single_file_support = false` in the server config so it only
+starts when `azure-pipelines.yml` is found.
+
+```lua
+-- lua/config/lsp/servers.lua
+azure_pipelines_ls = {
+  single_file_support = false,
+},
+```
+
+Config: `lua/config/lsp/servers.lua`

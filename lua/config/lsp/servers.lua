@@ -68,7 +68,12 @@ function M.init(lspconfig)
 			"sqlls",
 			"templ",
 			"yamlls",
-			"azure_pipelines_ls",
+		},
+		-- single_file_support must be false here: the old lspconfig default is true,
+		-- which causes the server to start on any yaml file and send rootUri=null,
+		-- triggering a UriError in the Node.js server.
+		azure_pipelines_ls = {
+			single_file_support = false,
 		},
 		tailwindcss = {
 			filetypes = {
