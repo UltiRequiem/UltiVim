@@ -1,6 +1,8 @@
 return {
 	"numToStr/Comment.nvim",
 	config = function()
+		-- Prevent the deprecated nvim-treesitter.configs integration from loading
+		vim.g.skip_ts_context_commentstring_module = true
 		local prehook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()
 		require("Comment").setup({
 			padding = true,
@@ -31,7 +33,9 @@ return {
 	event = "BufReadPre",
 	lazy = false,
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-		"JoosepAlviste/nvim-ts-context-commentstring",
+		{
+			"JoosepAlviste/nvim-ts-context-commentstring",
+			opts = { enable_autocmd = false },
+		},
 	},
 }

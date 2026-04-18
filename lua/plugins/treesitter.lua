@@ -1,5 +1,7 @@
 local config = function()
-	local opts = {
+	-- nvim-treesitter main branch: parser management only.
+	-- Neovim 0.12+ handles highlighting natively.
+	require("nvim-treesitter").setup({
 		ensure_installed = {
 			"angular",
 			"prisma",
@@ -45,129 +47,86 @@ local config = function()
 			"vue",
 			"yaml",
 		},
-		highlight = {
-			enable = true,
-		},
-		matchup = {
-			enable = true,
-		},
-		{
-			context_commentstring = {
-				enable = true,
-				enable_autocmd = true,
-			},
-		},
-		textobjects = {
-			lsp_interop = {
-				enable = true,
-				border = "rounded",
-				floating_preview_opts = {},
-				-- peek_definition_code = {
-				-- 	["<leader>df"] = "@function.outer",
-				-- 	["<leader>dF"] = "@class.outer",
-				-- },
-			},
-			move = {
-				enable = true,
-				set_jumps = true,
-				goto_next_start = {
-					["]f"] = "@function.inner",
-					["]e"] = "@function.outer",
-					["]b"] = "@parameter.outer",
-					["]d"] = "@block.inner",
-					["]a"] = "@attribute.inner",
-					["]m"] = "@this_method_call",
-					["]s"] = { query = "@scope", query_group = "locals" },
-					["]c"] = "@method_object_call",
-					["]o"] = "@object_declaration",
-					["]k"] = "@object_key",
-					["]v"] = "@object_value",
-					["]w"] = "@class.outer",
-				},
-				goto_next_end = {
-					["]F"] = "@function.inner",
-					["]E"] = "@function.outer",
-					["]B"] = "@parameter.outer",
-					["]D"] = "@block.inner",
-					["]A"] = "@attribute.inner",
-					["]M"] = "@this_method_call",
-					["]S"] = { query = "@scope", query_group = "locals" },
-					["]C"] = "@method_object_call",
-					["]O"] = "@object_declaration",
-					["]K"] = "@object_key",
-					["]V"] = "@object_value",
-					["]W"] = "@class.outer",
-				},
-				goto_previous_start = {
-					["[f"] = "@function.inner",
-					["[e"] = "@function.outer",
-					["[b"] = "@parameter.outer",
-					["[d"] = "@block.inner",
-					["[a"] = "@attribute.inner",
-					["[m"] = "@this_method_call",
-					["[s"] = { query = "@scope", query_group = "locals" },
-					["[c"] = "@method_object_call",
-					["[o"] = "@object_declaration",
-					["[k"] = "@object_key",
-					["[v"] = "@object_value",
-					["[w"] = "@class.outer",
-				},
-				goto_previous_end = {
-					["[F"] = "@function.inner",
-					["[E"] = "@function.outer",
-					["[B"] = "@parameter.outer",
-					["[D"] = "@block.inner",
-					["[A"] = "@attribute.inner",
-					["[M"] = "@this_method_call",
-					["[S"] = { query = "@scope", query_group = "locals" },
-					["[C"] = "@method_object_call",
-					["[O"] = "@object_declaration",
-					["[K"] = "@object_key",
-					["[V"] = "@object_value",
-					["[W"] = "@class.outer",
-				},
-			},
-			select = {
-				enable = true,
-				lookahead = true,
-				keymaps = {
-					["af"] = "@function.outer",
-					["if"] = "@function.inner",
-					["ac"] = "@call.outer",
-					["ic"] = "@call.inner",
-					["aC"] = "@class.outer",
-					["iC"] = "@class.inner",
-					["ib"] = "@parameter.inner",
-					["ab"] = "@parameter.outer",
-					["iB"] = "@block.inner",
-					["aB"] = "@block.outer",
-					["id"] = "@block.inner",
-					["ad"] = "@block.outer",
-					["il"] = "@loop.inner",
-					["al"] = "@loop.outer",
-					["ia"] = "@attribute.inner",
-					["aa"] = "@attribute.outer",
-				},
-			},
-		},
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				node_incremental = "v",
-				node_decremental = "V",
-				init_selection = "<C-y>",
-				-- scope_incremental = "<C-v>",
-			},
-		},
-	}
-
-	require("nvim-treesitter.configs").setup(opts)
+	})
 
 	vim.treesitter.language.register("markdown", "octo")
 
-	local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
-	-- k({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
-	-- k({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_previous)
+	-- nvim-treesitter-textobjects main branch: explicit setup + keymaps.
+	require("nvim-treesitter-textobjects").setup({
+		select = { lookahead = true },
+		move = { set_jumps = true },
+	})
+
+	local sel = require("nvim-treesitter-textobjects.select")
+	local move = require("nvim-treesitter-textobjects.move")
+
+	-- SELECT keymaps
+	local select_maps = {
+		["af"] = { "@function.outer", "textobjects" },
+		["if"] = { "@function.inner", "textobjects" },
+		["ac"] = { "@call.outer", "textobjects" },
+		["ic"] = { "@call.inner", "textobjects" },
+		["aC"] = { "@class.outer", "textobjects" },
+		["iC"] = { "@class.inner", "textobjects" },
+		["ib"] = { "@parameter.inner", "textobjects" },
+		["ab"] = { "@parameter.outer", "textobjects" },
+		["iB"] = { "@block.inner", "textobjects" },
+		["aB"] = { "@block.outer", "textobjects" },
+		["id"] = { "@block.inner", "textobjects" },
+		["ad"] = { "@block.outer", "textobjects" },
+		["il"] = { "@loop.inner", "textobjects" },
+		["al"] = { "@loop.outer", "textobjects" },
+		["ia"] = { "@attribute.inner", "textobjects" },
+		["aa"] = { "@attribute.outer", "textobjects" },
+	}
+	for key, args in pairs(select_maps) do
+		vim.keymap.set({ "x", "o" }, key, function()
+			sel.select_textobject(args[1], args[2])
+		end)
+	end
+
+	-- MOVE keymaps
+	local function mmap(lhs, fn, query, group)
+		vim.keymap.set({ "n", "x", "o" }, lhs, function()
+			fn(query, group or "textobjects")
+		end)
+	end
+
+	-- goto next start
+	mmap("]f", move.goto_next_start, "@function.inner")
+	mmap("]e", move.goto_next_start, "@function.outer")
+	mmap("]b", move.goto_next_start, "@parameter.outer")
+	mmap("]d", move.goto_next_start, "@block.inner")
+	mmap("]a", move.goto_next_start, "@attribute.inner")
+	mmap("]s", move.goto_next_start, "@local.scope", "locals")
+	mmap("]w", move.goto_next_start, "@class.outer")
+
+	-- goto next end
+	mmap("]F", move.goto_next_end, "@function.inner")
+	mmap("]E", move.goto_next_end, "@function.outer")
+	mmap("]B", move.goto_next_end, "@parameter.outer")
+	mmap("]D", move.goto_next_end, "@block.inner")
+	mmap("]A", move.goto_next_end, "@attribute.inner")
+	mmap("]S", move.goto_next_end, "@local.scope", "locals")
+	mmap("]W", move.goto_next_end, "@class.outer")
+
+	-- goto previous start
+	mmap("[f", move.goto_previous_start, "@function.inner")
+	mmap("[e", move.goto_previous_start, "@function.outer")
+	mmap("[b", move.goto_previous_start, "@parameter.outer")
+	mmap("[d", move.goto_previous_start, "@block.inner")
+	mmap("[a", move.goto_previous_start, "@attribute.inner")
+	mmap("[s", move.goto_previous_start, "@local.scope", "locals")
+	mmap("[w", move.goto_previous_start, "@class.outer")
+
+	-- goto previous end
+	mmap("[F", move.goto_previous_end, "@function.inner")
+	mmap("[E", move.goto_previous_end, "@function.outer")
+	mmap("[B", move.goto_previous_end, "@parameter.outer")
+	mmap("[D", move.goto_previous_end, "@block.inner")
+	mmap("[A", move.goto_previous_end, "@attribute.inner")
+	mmap("[S", move.goto_previous_end, "@local.scope", "locals")
+	mmap("[W", move.goto_previous_end, "@class.outer")
 end
 
 return {
@@ -178,19 +137,20 @@ return {
 		lazy = false,
 		build = ":TSUpdate",
 		dependencies = {
-			"nvim-treesitter/nvim-treesitter-textobjects",
-			"JoosepAlviste/nvim-ts-context-commentstring",
-			"CKolkey/ts-node-action",
+			{
+				"nvim-treesitter/nvim-treesitter-textobjects",
+				branch = "main",
+			},
 			"nvim-treesitter/nvim-treesitter-context",
+			{
+				"LiadOz/nvim-dap-repl-highlights",
+				config = true,
+			},
 			{
 				"bennypowers/template-literal-comments.nvim",
 				config = function()
 					pcall(require("template-literal-comments").setup, {})
 				end,
-			},
-			{
-				"LiadOz/nvim-dap-repl-highlights",
-				config = true,
 			},
 		},
 	},
