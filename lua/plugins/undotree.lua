@@ -15,13 +15,13 @@ local opts = {
 		winblend = 2,
 	},
 	keymaps = {
-		["j"] = "move_next",
-		["k"] = "move_prev",
-		["J"] = "move_change_next",
-		["K"] = "move_change_prev",
-		["<cr>"] = "action_enter",
-		["p"] = "enter_diffbuf",
-		["q"] = "quit",
+		["move_next"] = "j",
+		["move_prev"] = "k",
+		["move_change_next"] = "J",
+		["move_change_prev"] = "K",
+		["action_enter"] = "<cr>",
+		["enter_diffbuf"] = "p",
+		["quit"] = "q",
 	},
 }
 return {

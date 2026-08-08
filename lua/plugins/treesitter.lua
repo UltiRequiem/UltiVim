@@ -36,6 +36,7 @@ local config = function()
 		"python",
 		"query",
 		"regex",
+		"rust",
 		"ruby",
 		"scheme",
 		"scss",

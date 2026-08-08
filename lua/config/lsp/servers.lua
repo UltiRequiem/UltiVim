@@ -172,6 +172,14 @@ function M.init(lspconfig)
 		clangd = {},
 		angularls = {},
 		rust_analyzer = {},
+		basedpyright = {
+			settings = {
+				basedpyright = {
+					disableOrganizeImports = true,
+				},
+			},
+		},
+		ruff = {},
 		gopls = {
 			settings = {
 				gopls = {

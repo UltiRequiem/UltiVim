@@ -12,6 +12,7 @@ local opts = {
 		json = { "prettierd" },
 		jsonc = { "prettierd" },
 		lua = { "stylua" },
+		python = { "ruff_format" },
 		scss = { "prettierd" },
 		typescript = { "biome" },
 		vue = { "prettierd" },
