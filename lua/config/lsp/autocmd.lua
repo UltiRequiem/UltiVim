@@ -11,6 +11,36 @@ local function inlay_hints_autocmd(bufnr)
 	})
 end
 
+-- typescript-language-server's tsserver wraps compiled/dist definitions in a
+-- separate "source definition" lookup (same command VS Code's
+-- `typescript.preferGoToSourceDefinition` uses); plain textDocument/definition
+-- stops at the nearest .d.ts when packages ship without declarationMap.
+local function ts_goto_source_definition()
+	local bufnr = vim.api.nvim_get_current_buf()
+	local client = vim.lsp.get_clients({ bufnr = bufnr, name = "ts_ls" })[1]
+	if not client then
+		return vim.lsp.buf.definition()
+	end
+	local params = vim.lsp.util.make_position_params(0, client.offset_encoding)
+	client:request("workspace/executeCommand", {
+		command = "_typescript.goToSourceDefinition",
+		arguments = { params.textDocument.uri, params.position },
+	}, function(err, result)
+		if err or not result or vim.tbl_isempty(result) then
+			return vim.lsp.buf.definition()
+		end
+		if #result == 1 then
+			vim.lsp.util.jump_to_location(result[1], client.offset_encoding, true)
+		else
+			vim.fn.setqflist({}, " ", {
+				title = "Source Definitions",
+				items = vim.lsp.util.locations_to_items(result, client.offset_encoding),
+			})
+			vim.cmd("botright copen")
+		end
+	end, bufnr)
+end
+
 function M.init()
 	return { inlay_hints_autocmd = inlay_hints_autocmd }
 end
@@ -39,7 +69,7 @@ function M.lsp_attach()
 			vim.keymap.set("n", "<leader>dd", vim.diagnostic.setqflist, bufopts)
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 			-- if not require("neoconf").get("lsp.keys.goto_definition.disable") then
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+			vim.keymap.set("n", "gd", ts_goto_source_definition, bufopts)
 			-- end
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
 			vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, bufopts)
