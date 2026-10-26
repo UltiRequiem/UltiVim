@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Lua
         uses: leafo/gh-actions-lua@v10
@@ -30,7 +30,7 @@ jobs:
         run: luacheck lua/ --globals vim --codes
 
       - name: Run StyLua
-        uses: JohnnyMorganz/stylua-action@v3
+        uses: JohnnyMorganz/stylua-action@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install Neovim
         run: |
@@ -70,7 +70,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Scan for secrets
         run: |
@@ -89,7 +89,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Plugin count check
         run: |
@@ -109,3 +109,13 @@ jobs:
           if [ $total_lines -gt 10000 ]; then
             echo "⚠️  Large configuration: $total_lines lines"
           fi
+
+  ci:
+    name: CI
+    if: always()
+    needs: [lint, neovim-test, security, performance]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every job to pass
+        run: |
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then exit 1; fi
