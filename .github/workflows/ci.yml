@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Lua
         uses: leafo/gh-actions-lua@v10
@@ -30,7 +30,7 @@ jobs:
         run: luacheck lua/ --globals vim --codes
 
       - name: Run StyLua
-        uses: JohnnyMorganz/stylua-action@v3
+        uses: JohnnyMorganz/stylua-action@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
@@ -42,16 +42,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install Neovim
         run: |
-          # Install Neovim via package manager for reliability
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository ppa:neovim-ppa/unstable -y
-          sudo apt-get update
-          sudo apt-get install -y neovim
+          curl -fsSL https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz | sudo tar -xz -C /opt
+          echo "/opt/nvim-linux-x86_64/bin" >> "$GITHUB_PATH"
 
       - name: Test configuration loading
         run: |
@@ -70,7 +66,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Scan for secrets
         run: |
@@ -89,7 +85,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Plugin count check
         run: |
@@ -109,3 +105,13 @@ jobs:
           if [ $total_lines -gt 10000 ]; then
             echo "⚠️  Large configuration: $total_lines lines"
           fi
+
+  ci:
+    name: CI
+    if: always()
+    needs: [lint, neovim-test, security, performance]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every job to pass
+        run: |
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then exit 1; fi
